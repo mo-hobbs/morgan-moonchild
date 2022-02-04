@@ -3,7 +3,8 @@ import './App.css';
 
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import Contact from './Contact';
+import About from './About';
 
 
 function App() {
@@ -19,8 +20,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="/">
             <h1>Page Count: {count}</h1>
