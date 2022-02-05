@@ -1,10 +1,12 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Contact from './Contact';
 import About from './About';
+import Header from "./Navbar.js";
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
             <Contact />
           </Route>
           <Route path="/">
+            <Header />
             <h1>Page Count: {count}</h1>
           </Route>
         </Switch>
