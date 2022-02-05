@@ -1,5 +1,5 @@
 import React from "react";
-
+import wood_malas from "./images/wood_malas.jpg";
 
 
 
@@ -13,7 +13,7 @@ function About() {
             <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-sm-8 col-lg-10">
-                    <img src="./client/src/images/wood-malas.jpg" />
+                    <img src={wood_malas} />
                 </div>
                 <div class="col-xs-6 col-sm-8 col-lg-10"> 
                     <h2>Welcome</h2>
