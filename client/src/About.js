@@ -8,7 +8,7 @@ function About() {
         <div>
             <h1 className="myStyle" >About</h1>
             <p>Are you having so much fun learning how to use CSS within our React components?</p>
-            <button type="button" className="btn btn-primary" variant="outline-primary">Primary</button>
+            <button type="button" className="btn btn-primary" variant="outline-primary">Yes</button>
             
             <div class="container">
             <div class="row">
