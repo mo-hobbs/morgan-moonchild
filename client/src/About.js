@@ -2,6 +2,7 @@ import React from "react";
 import wood_malas from "./images/wood_malas.jpg";
 
 
+import { Grid, Segment } from 'semantic-ui-react';
 
 function About() {
     return (
@@ -12,10 +13,10 @@ function About() {
             
             <div class="container">
             <div class="row">
-                <div class="col-xs-6 col-sm-8 col-lg-10">
-                    <img src={wood_malas} />
+                <div class="col-s-6">
+                    <img src={wood_malas} alt="three mala necklaces made with different types of wood: red sandalwood, cedar, and brown sandalwood" />
                 </div>
-                <div class="col-xs-6 col-sm-8 col-lg-10"> 
+                <div class="col-s-6"> 
                     <h2>Welcome</h2>
 
                     <p>Now that you are here take a deep breath in and a long exhale.<p/>
@@ -50,8 +51,26 @@ function About() {
             </div>
             </div>
 
-
-
+            <Grid container columns={2} stackable>
+                <Grid.Column>
+                <Segment><img src={wood_malas} alt="three mala necklaces made with different types of wood: red sandalwood, cedar, and brown sandalwood" /></Segment>
+                </Grid.Column>
+                <Grid.Column>
+                <Segment><img src={wood_malas} alt="three mala necklaces made with different types of wood: red sandalwood, cedar, and brown sandalwood" /></Segment>
+                </Grid.Column>
+                <Grid.Column>
+                <Segment>Content</Segment>
+                </Grid.Column>
+                <Grid.Column>
+                <Segment>Content</Segment>
+                </Grid.Column>
+                <Grid.Column>
+                <Segment>Content</Segment>
+                </Grid.Column>
+                <Grid.Column>
+                <Segment>Content</Segment>
+                </Grid.Column>
+            </Grid>
 
         </div>
     )
