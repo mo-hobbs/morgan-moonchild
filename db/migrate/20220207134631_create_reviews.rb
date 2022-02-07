@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration[6.1]
       t.datetime :date_reviewed
       t.integer :star_rating
       t.text :message
-      t.integer :order_id
+      t.bigint :order_id
 
       t.timestamps
     end
