@@ -1,13 +1,13 @@
-import logo from './logo.svg';
 import './styles/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import 'bootstrap/dist/css/bootstrap.css';
 
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Contact from './Contact';
 import About from './About';
-import Header from "./Navbar.js";
+import Header from './Navbar';
+import Home from './Home';
+
 
 
 function App() {
@@ -22,6 +22,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Header />
+        <Home />
         <Switch>
           <Route path="/about">
             <About />
@@ -29,8 +31,7 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/">
-            <Header />
+          <Route exact path="/">
             <h1>Page Count: {count}</h1>
           </Route>
         </Switch>
