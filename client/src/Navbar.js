@@ -14,7 +14,7 @@ function Header() {
   <Navbar.Collapse id="basic-navbar-nav">
     <div className="drop-down">
 
-  <div className="container" className="nav-buttons">
+  <div className="nav-buttons">
     <Nav className="me-auto">
       <Nav.Link className= "nav-but" href="/">Home</Nav.Link>
       <Nav.Link className= "nav-but" href="/about">About</Nav.Link>
