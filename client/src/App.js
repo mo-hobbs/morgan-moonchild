@@ -7,6 +7,7 @@ import Contact from './Contact';
 import About from './About';
 import Header from './Navbar';
 import Home from './Home';
+import Footer from './Footer';
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <div className="App">
         <Header />
         <Home />
+        <Footer />
         <Switch>
           <Route path="/about">
             <About />
