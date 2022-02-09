@@ -15,8 +15,8 @@ function Footer() {
     const logoSize = {
         "width": "50%", 
         "display": "block",
-        "margin-left": "auto",
-        "margin-right": "auto"
+        "marginLeft": "auto",
+        "marginRight": "auto"
     }
 
     return (
