@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 
+
 function ProductPage() {
 
     const [products, setProducts] = useState([]);

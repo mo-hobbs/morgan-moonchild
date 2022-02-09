@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 
 function ProductCard({ p }) {
 
@@ -15,20 +15,22 @@ function ProductCard({ p }) {
     }
 
     return (
-        <Row xs={1} md={2} className="g-4">
-            <Col>
-                <Row>
-                <Card>
+        <Container>
+            <Row xs={1} md={2}>
+            <Col md={{ span: 4, offset: 4 }}>
+            <br />
+                <Card style={{ width: '28rem' }}>
                 <Card.Img variant="top" src="https://i.etsystatic.com/23287327/r/il/2bde7a/3700353637/il_fullxfull.3700353637_msew.jpg" />
                 <Card.Body>
                     <Card.Title>{product_title}</Card.Title>
                     <Card.Text>${price}</Card.Text>
                 </Card.Body>
                 </Card>
-            </Row>
             </Col>
-        
-        </Row>
+            </Row>
+        </Container> 
+
+
     )
 }
 

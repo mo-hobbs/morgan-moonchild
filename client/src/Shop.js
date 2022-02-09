@@ -1,12 +1,13 @@
 import React from "react";
 import ProductPage from "./ProductPage";
+import { Container } from "react-bootstrap";
 
 function Shop() {
     return (
-        <div>
+        <Container>
             <h2>Shop All</h2>
             <ProductPage />
-        </div>
+            </Container>    
     )
 }
 
