@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   #from https://learning.flatironschool.com/courses/4552/pages/authenticating-users?module_item_id=346173 
   post "/login", to: "sessions#create"
   get "/me", to: "users#show"
+  delete "/logout", to: "sessions#destroy"
 
   # route to test your configuration
   get '/hello', to: 'application#hello_world'

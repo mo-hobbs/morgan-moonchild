@@ -36,11 +36,13 @@ function App() {
     if (user) {
       return <h2>Welcome, {user.username}!</h2>;
     } else {
-      return <Login onLogin={setUser} />;
+      return <Login onLogin={setUser} user={user} />;
     }
   }
 
-  
+  function handleLogout() {
+    setUser(null);
+  }
 
   return (
     <BrowserRouter>
