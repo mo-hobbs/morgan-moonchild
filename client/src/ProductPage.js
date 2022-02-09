@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
+import ProductCard2 from "./ProductCard2";
+
+
+import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 
 
 function ProductPage() {
@@ -42,10 +46,34 @@ function ProductPage() {
                 key={p.id} 
                 p={p}
                 />
+                <Container> 
+                {Object.values(products).length > 0 &&
+                Object.values(products).map(p => (
+                    <Row xs={1} md={2} className="g-4">
+                    {Array.from({ length: 2 }).map((_, idx) => (
+                    <Col>
+                    <Card key={p.id}>
+                        <Card.Img variant="top" src={p.image1} />
+                        <Card.Body>
+                        <Card.Title>{p.product_title}</Card.Title>
+                            <Card.Text>Possibly some text here</Card.Text>
+                        </Card.Body>
+                    </Card>
+                    </Col>
+                ))}
+                </Row>
+              ))}
+        </Container>
+                )
+
+                }
+                
             </div>
         }
         )
     }
+    
+
 
     return (
         <div>
