@@ -8,6 +8,7 @@ import About from './About';
 import Header from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
+import Shop from './Shop';
 
 
 
@@ -24,8 +25,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Home />
-        <Footer />
         <Switch>
           <Route path="/about">
             <About />
@@ -33,10 +32,15 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
+          <Route path="/shop">
+            <Shop />
+          </Route>
           <Route exact path="/">
-            <h1>Page Count: {count}</h1>
+            <Home />
+            {/* <h1>Page Count: {count}</h1> */}
           </Route>
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );
