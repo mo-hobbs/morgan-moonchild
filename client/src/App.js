@@ -15,12 +15,32 @@ import Shop from './Shop';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [user, setUser] = useState(null);
+
 
   useEffect(() => {
     fetch("/hello")
       .then((r) => r.json())
       .then((data) => setCount(data.count));
   }, []);
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  function handleLogin() {
+    if (user) {
+      return <h2>Welcome, {user.username}!</h2>;
+    } else {
+      return <Login onLogin={setUser} />;
+    }
+  }
+
+  
 
   return (
     <BrowserRouter>
@@ -34,7 +54,7 @@ function App() {
             <Contact />
           </Route>
           <Route path="/login">
-            <Login />
+            {handleLogin()}
           </Route>
           <Route path="/shop">
             <Shop />

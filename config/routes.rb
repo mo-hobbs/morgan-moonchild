@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "products#index"
 
+  #from https://learning.flatironschool.com/courses/4552/pages/authenticating-users?module_item_id=346173 
+  post "/login", to: "sessions#create"
+  get "/me", to: "users#show"
+
   # route to test your configuration
   get '/hello', to: 'application#hello_world'
 
