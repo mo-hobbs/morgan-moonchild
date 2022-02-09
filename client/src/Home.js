@@ -1,5 +1,7 @@
 import React from "react";
 import FeaturedItems from "./FeaturedItems";
+import Reviews from "./Reviews";
+
 import { Button, Container, Row } from "react-bootstrap";
 
 function Home() {
@@ -20,7 +22,8 @@ function Home() {
                     <Button href="/shop" size="lg" variant="dark" style={buttonStyle}>Shop All Malas</Button> 
                 </Row>
                 <Row >
-                    <h2>Reviews</h2>
+                    <h2>Testimonials</h2>
+                    <Reviews />
                 </Row>
             </Container>
         </div>
