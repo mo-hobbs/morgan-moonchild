@@ -3,13 +3,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Contact from './Contact';
-import About from './About';
 import Header from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
-import Shop from './Shop';
 
+import Contact from './Contact';
+import About from './About';
+import Login from './Login'
+import Shop from './Shop';
 
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/shop">
             <Shop />

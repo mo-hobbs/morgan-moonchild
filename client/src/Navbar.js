@@ -19,6 +19,7 @@ function Header() {
           <Nav.Link className= "nav-but" href="/">Home</Nav.Link>
           <Nav.Link className= "nav-but" href="/about">About</Nav.Link>
           <Nav.Link className= "nav-but" href="/contact">Contact</Nav.Link>
+          <Nav.Link className= "nav-but" href="/login">Login</Nav.Link>
           <Button href="/shop" size="md" variant="dark" >Shop Now</Button> 
         </Nav>
         </div>
