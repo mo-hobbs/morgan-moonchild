@@ -3,4 +3,6 @@ class User < ApplicationRecord
     has_many :order_items, through: :orders 
 
     validates :username, presence: true, uniqueness: true, length: { minimum: 3, maximum: 30 }
+
+    has_secure_password
 end

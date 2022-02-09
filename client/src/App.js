@@ -9,7 +9,7 @@ import Footer from './Footer';
 
 import Contact from './Contact';
 import About from './About';
-import Login from './Login'
+import Login from './Login';
 import Shop from './Shop';
 
 

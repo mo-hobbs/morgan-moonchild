@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import moon_logo_gold from "./images/moon-logo-gold.png";
 import { Row, Col, Card, Container } from 'react-bootstrap';
 
 function ProductCard({ p }) {
@@ -9,31 +10,31 @@ function ProductCard({ p }) {
         console.log(imageToString.image1.slice(9, -11));
         //this needs to return a variable that can be put in a src string
         const imageStr = imageToString.image1.slice(9, -11);
-        return (
-            <img src={imageStr} alt="image of mala" />
-        )
+        const imgSrc = `"${imageStr}"`
+        return imgSrc
     }
+
 
     return (
         <Container>
+            <Row>
+            {renderImage({image1})}
+            </Row>
             <Row xs={1} md={2}>
             <Col md={{ span: 4, offset: 4 }}>
             <br />
                 <Card style={{ width: '28rem' }}>
-                <Card.Img variant="top" src="https://i.etsystatic.com/23287327/r/il/2bde7a/3700353637/il_fullxfull.3700353637_msew.jpg" />
                 <Card.Body>
+                    <Card.Img variant="top" src={moon_logo_gold} />
                     <Card.Title>{product_title}</Card.Title>
                     <Card.Text>${price}</Card.Text>
                 </Card.Body>
                 </Card>
             </Col>
             </Row>
-        </Container> 
-
-
+        </Container>  
     )
 }
-
 
 
 export default ProductCard;
