@@ -6,16 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 function About() {
     return (
         <div>
-            <h1 className="myStyle" >About</h1>
             <Container>
-                <Row>
-                    <Col>
-                        <h1>Left Title</h1>
-                    </Col>
-                    <Col>
-                        <h1>Right Title</h1>
-                    </Col>
-                </Row>
                 <Row>
                     <Col>
                         <div>

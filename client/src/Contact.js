@@ -1,12 +1,13 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 function Contact() {
     return (
-        <div>
-            <h1 className="myStyle">Contact</h1>
+        <Container >
+            <h1>Contact</h1>
             <p>Reach out if you have any questions.</p>
             <button>Contact</button>
-        </div>
+        </Container>
     )
 }
 
