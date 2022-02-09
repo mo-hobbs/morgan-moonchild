@@ -17,7 +17,10 @@ function Home() {
                     <FeaturedItems />
                 </Row>
                 <Row  xs={2} md={4} >
-                    <Button href="/shop" size="lg" variant="dark" style={buttonStyle}>Shop Now</Button> 
+                    <Button href="/shop" size="lg" variant="dark" style={buttonStyle}>Shop All Malas</Button> 
+                </Row>
+                <Row >
+                    <h2>Reviews</h2>
                 </Row>
             </Container>
         </div>
