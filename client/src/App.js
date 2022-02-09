@@ -14,15 +14,16 @@ import Shop from './Shop';
 
 
 function App() {
-  const [count, setCount] = useState(0);
+  //this was from setup to check sessions working
+  // const [count, setCount] = useState(0);
   const [user, setUser] = useState(null);
 
-
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+  //this was from setup to check sessions working
+  // useEffect(() => {
+  //   fetch("/hello")
+  //     .then((r) => r.json())
+  //     .then((data) => setCount(data.count));
+  // }, []);
 
   useEffect(() => {
     fetch("/me").then((response) => {
@@ -47,7 +48,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header user={user} onLogout={handleLogout}/>
         <Switch>
           <Route path="/about">
             <About />
