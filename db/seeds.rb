@@ -10,35 +10,35 @@ puts "Creating users..."
 
 User.create(
     username: "weasel",
-    password: "123", 
+    password_digest: "123", 
     full_name: "weasel b",
     email: "weasel@hotmail.com"
 )
 
 User.create(
     username: "margot",
-    password: "123", 
+    password_digest: "123", 
     full_name: "margot h",
     email: "margot@hotmail.com"
 )
 
 User.create(
     username: "k-pup",
-    password: "123", 
+    password_digest: "123", 
     full_name: "k-pup m",
     email: "kpuphotmail.com"
 )
 
 User.create(
     username: "pippin",
-    password: "123", 
+    password_digest: "123", 
     full_name: "pippin h-n",
     email: "pippin@hotmail.com"
 )
 
 User.create(
     username: "clicquot",
-    password: "123", 
+    password_digest: "123", 
     full_name: "clicquot cat",
     email: "clicquot@hotmail.com"
 )
