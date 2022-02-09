@@ -2,7 +2,14 @@ import React from "react";
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import logo_wg_rectangle from './images/logo-rectangle-2.png';
 
-function Header() {
+function Header({ onLogout, user }) {
+  function handleLogout() {
+    fetch("/logout", {
+      method: "DELETE",
+    }).then(() => onLogout());
+  }
+
+
   return (
     <Navbar>
     <Container>
@@ -19,6 +26,7 @@ function Header() {
           <Nav.Link className= "nav-but" href="/">Home</Nav.Link>
           <Nav.Link className= "nav-but" href="/about">About</Nav.Link>
           <Nav.Link className= "nav-but" href="/contact">Contact</Nav.Link>
+          <Nav.Link className= "nav-but" href="/login" onClick={handleLogout}>{user ? "Logout" : "Login" }</Nav.Link>
           <Button href="/shop" size="md" variant="dark" >Shop Now</Button> 
         </Nav>
         </div>

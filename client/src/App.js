@@ -3,34 +3,61 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Contact from './Contact';
-import About from './About';
 import Header from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
+
+import Contact from './Contact';
+import About from './About';
+import Login from './Login'
 import Shop from './Shop';
 
 
-
 function App() {
-  const [count, setCount] = useState(0);
+  //this was from setup to check sessions working
+  // const [count, setCount] = useState(0);
+  const [user, setUser] = useState(null);
+
+  //this was from setup to check sessions working
+  // useEffect(() => {
+  //   fetch("/hello")
+  //     .then((r) => r.json())
+  //     .then((data) => setCount(data.count));
+  // }, []);
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
   }, []);
+
+  function handleLogin() {
+    if (user) {
+      return <h2>Welcome, {user.username}!</h2>;
+    } else {
+      return <Login onLogin={setUser} user={user} />;
+    }
+  }
+
+  function handleLogout() {
+    setUser(null);
+  }
 
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header user={user} onLogout={handleLogout}/>
         <Switch>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/login">
+            {handleLogin()}
           </Route>
           <Route path="/shop">
             <Shop />
