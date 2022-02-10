@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Card } from "react-bootstrap";
 
 function Reviews() {
     const [reviews, setReviews] = useState([]);
-    const [num, setNum] = useState(0);
-    const [featuredReviews, setFeaturedReviews] = useState([]);
 
     useEffect(() => {
         fetch(`/testimonials`).then((response) => {
@@ -27,16 +25,16 @@ function Reviews() {
             return (
             <Card className="review" key={review.id} 
                 review={review}>
-              <Card.Header>★★★★★</Card.Header>
-              <Card.Body>
-                <blockquote className="blockquote mb-0">
-                  <p>{review.message}
-                  </p>
-                  <footer className="blockquote-footer">
-                    {review.reviewer}
-                  </footer>
-                </blockquote>
-              </Card.Body>
+                <Card.Header>★★★★★</Card.Header>
+                <Card.Body>
+                    <blockquote className="blockquote mb-0">
+                        <p>{review.message}
+                        </p>
+                        <footer className="blockquote-footer">
+                            {review.reviewer}
+                        </footer>
+                    </blockquote>
+                </Card.Body>
             </Card>
             )
         }
