@@ -41,10 +41,16 @@ function ProductPage() {
                 <ProductCard 
                 key={p.id} 
                 p={p}
+                handleClick={handleClick}
                 />
             </div>
         }
         )
+    }
+
+    //need to figure out how to link to the Product Component 
+    function handleClick(id) {
+        console.log(id)
     }
 
     return (
