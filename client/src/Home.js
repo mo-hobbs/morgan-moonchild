@@ -21,9 +21,13 @@ function Home() {
                 <Row  xs={2} md={4} >
                     <Button href="/shop" size="lg" variant="dark" style={buttonStyle}>Shop All Malas</Button> 
                 </Row>
+
+            </Container>
+            <br></br>
+            <Container>    
                 <Row >
-                    <h2>Testimonials</h2>
                     <Reviews />
+                    <br></br>
                 </Row>
             </Container>
         </div>

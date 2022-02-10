@@ -23,6 +23,8 @@ function Reviews() {
     function renderReviews() {
         return Object.values(reviews).map((review) => {
             return (
+                <Container >
+
             <Card className="review" key={review.id} 
                 review={review}>
                 <Card.Header>★★★★★</Card.Header>
@@ -36,6 +38,7 @@ function Reviews() {
                     </blockquote>
                 </Card.Body>
             </Card>
+            </Container>
             )
         }
         )
@@ -46,6 +49,7 @@ function Reviews() {
             <Row>
                 {renderReviews()}
             </Row>
+            <br></br>
         </Container>
     )
 }
