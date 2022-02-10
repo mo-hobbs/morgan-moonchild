@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :products, only: [:index, :show]
-  resources :reviews, only: [:index, :show]
+  resources :reviews, only: [:index, :show, :render_reviews]
   resources :users, only: [:index, :show, :create, :destroy]
   resources :order_items, only: [:index, :show]
   resources :orders, only: [:index, :show, :create]
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get "/me", to: "users#show"
   delete "/logout", to: "sessions#destroy"
+  get '/testimonials', to: "reviews#render_reviews"
 
   # route to test your configuration
   get '/hello', to: 'application#hello_world'
