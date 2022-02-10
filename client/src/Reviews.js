@@ -8,7 +8,7 @@ function Reviews() {
     const [featuredReviews, setFeaturedReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`/reviews`).then((response) => {
+        fetch(`/testimonials`).then((response) => {
             if (response.ok) {
             response.json().then((reviews_array) => {
                 setReviews(reviews_array)
@@ -27,16 +27,13 @@ function Reviews() {
             return (
             <Card className="review" key={review.id} 
                 review={review}>
-              <Card.Header>Quote</Card.Header>
+              <Card.Header>★★★★★</Card.Header>
               <Card.Body>
                 <blockquote className="blockquote mb-0">
-                  <p>
-                    {' '}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-                    erat a ante.{' '}
+                  <p>{review.message}
                   </p>
                   <footer className="blockquote-footer">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
+                    {review.reviewer}
                   </footer>
                 </blockquote>
               </Card.Body>
@@ -45,9 +42,6 @@ function Reviews() {
         }
         )
     }
-
-    
-    
 
     return (
         <Container>

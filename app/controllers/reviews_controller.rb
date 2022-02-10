@@ -11,4 +11,10 @@ class ReviewsController < ApplicationController
         render json: review
     end
 
+    def render_reviews
+        render_reviews = Review.where("star_rating =?", 5).max(3)
+        render json: render_reviews
+    end    
+
+
 end
