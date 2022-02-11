@@ -3,24 +3,10 @@ import { Form, Button, Container } from "react-bootstrap";
 
 function Contact() {
     const [errorState, setErrorState] = useState(null);
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        inquiry_type: "",
-        message: "",
-    })
-
-    console.log(formData);
-
-    function handleChange(e) {
-        console.log(e.target.name)
-        setFormData({
-            ...formData, 
-            [e.target.name]: e.target.value,
-        });
-        localStorage["{e.target.name}"] = e.target.value;
-        console.log(localStorage)
-    }
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [inquiryType, setInquiryType] = useState("");
+    const [message, setMessage] = useState("");
 
     //add function to display a successful contact submit 
 
@@ -33,7 +19,10 @@ function Contact() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                ...formData, 
+                name,
+                email,
+                inquiryType,
+                message
             }),
             }).then((r) => {
                 if (r.ok) {
@@ -54,7 +43,7 @@ function Contact() {
 
     return (
         <Container >
-        <Form>
+        <Form onSubmit={handleSubmit}>
             <h2>Contact</h2>
             <p>Happy to help and answer any questions</p>
             <Form.Group className="mb-3" >
@@ -62,8 +51,8 @@ function Contact() {
                 type="text" 
                 name="name"
                 autoComplete="name"
-                value={formData.name}
-                onChange={(e) => handleChange(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Your name" />
 
             </Form.Group>
@@ -73,8 +62,8 @@ function Contact() {
                 type="email" 
                 name="email"
                 autoComplete="email"
-                value={formData.email}
-                onChange={(e) => handleChange(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email" />
                 <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
@@ -88,12 +77,12 @@ function Contact() {
                  name="inquiry_type"
                 >Type of inquiry</option>
                 <option 
-                value={formData.inquiry_type}
-                onSelect={(e) => handleChange(e.target.value)}
+                value={inquiryType}
+                onSelect={(e) => setInquiryType(e.target.value)}
                 >General Question</option>
                 <option 
-                value={formData.inquiry_type}
-                onSelect={(e) => handleChange(e.target.value)}
+                value={inquiryType}
+                onSelect={(e) => setInquiryType(e.target.value)}
                 >Wholesale Inquiry</option>
             </Form.Select>
             </Form.Group>
@@ -102,14 +91,14 @@ function Contact() {
                 <Form.Control
                     as="textarea"
                     name="message"
-                    value={formData.message}
-                    onChange={(e) => handleChange(e.target.value)}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     placeholder="Message"
                     style={{ height: '100px' }}
                 />
             </Form.Group>
 
-            <Button variant="dark" type="submit" onSubmit={(e)=>handleSubmit(e)}>
+            <Button variant="dark" type="submit">
                 Submit
             </Button>
         </Form>
