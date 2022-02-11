@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts, only: [:index, :show, :create]
   resources :products, only: [:index, :show]
   resources :reviews, only: [:index, :show, :render_reviews]
   resources :users, only: [:index, :show, :create, :destroy]
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   delete "/logout", to: "sessions#destroy"
   get '/testimonials', to: "reviews#render_reviews"
+  get '/shop', to: "products#show"
 
   # route to test your configuration
   get '/hello', to: 'application#hello_world'
