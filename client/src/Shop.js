@@ -7,7 +7,7 @@ function Shop() {
         <Container>
             <h2>Shop All</h2>
             <ProductPage />
-            </Container>    
+        </Container>    
     )
 }
 

@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_07_134800) do
+ActiveRecord::Schema.define(version: 2022_02_11_145146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "inquiry_type"
+    t.text "message"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_contacts_on_user_id"
+  end
 
   create_table "order_items", force: :cascade do |t|
     t.integer "quantity"
@@ -71,4 +82,5 @@ ActiveRecord::Schema.define(version: 2022_02_07_134800) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "contacts", "users"
 end
