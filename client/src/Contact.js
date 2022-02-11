@@ -13,6 +13,7 @@ function Contact() {
     console.log(formData);
 
     function handleChange(e) {
+        console.log(e.target.name)
         setFormData({
             ...formData, 
             [e.target.name]: e.target.value,
@@ -100,6 +101,7 @@ function Contact() {
             <Form.Group className="mb-3" >
                 <Form.Control
                     as="textarea"
+                    name="message"
                     value={formData.message}
                     onChange={(e) => handleChange(e.target.value)}
                     placeholder="Message"

@@ -20,10 +20,8 @@ ActiveRecord::Schema.define(version: 2022_02_11_145146) do
     t.string "email"
     t.string "inquiry_type"
     t.text "message"
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
   create_table "order_items", force: :cascade do |t|
@@ -82,5 +80,4 @@ ActiveRecord::Schema.define(version: 2022_02_11_145146) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "contacts", "users"
 end
