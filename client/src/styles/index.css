@@ -13,12 +13,13 @@ code {
     monospace;
 }
 
-.wood_malas {
-  width: 500px
+.about_photos {
+  width: 400px
 }
 
 .footer {
-  padding-bottom: 3em
+  padding-bottom: 3em;
+  padding-top: 2em
 }
 
 /* .featured-items {
