@@ -1,25 +1,14 @@
 import React from "react";
 import moon_logo_gold from "./images/moon-logo-gold.png";
-import { Row, Col, Card, Container, Nav } from 'react-bootstrap';
-
-import { Link } from "react-router-dom";
+import { Card } from 'react-bootstrap';
 
 
-function ProductCard({ p, handleClick }) {
+function ProductCard({ p }) {
 
     const { id, product_title, description, price, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, status } = p;
 
-    // function handleClick(id) {
-    //     console.log(id)
-    // }
-
     return (
-        <div onClick={()=>handleClick(p.id)}>
-        <Container >
-        <Card.Link href={`/shop/${id}`}>
-            <Row xs={1} md={2} className="g-4">
-            <Col md={{ span: 4, offset: 4 }}>
-            <br />
+        <Card.Link href={`/products/${id}`}>
                 <Card style={{ width: '24rem' }}>
                 <Card.Body>
                     <Card.Img variant="top" src={image1.slice(9,-11)} />
@@ -27,11 +16,7 @@ function ProductCard({ p, handleClick }) {
                         <Card.Text>${price}</Card.Text>
                 </Card.Body>
                 </Card>
-            </Col>
-            </Row>
-            </Card.Link>
-        </Container>  
-        </div>
+        </Card.Link>
     )
 }
 
