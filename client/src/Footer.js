@@ -13,7 +13,7 @@ function Footer() {
     }
 
     const logoSize = {
-        "width": "50%", 
+        "width": "400px", 
         "display": "block",
         "marginLeft": "auto",
         "marginRight": "auto"

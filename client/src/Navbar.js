@@ -10,8 +10,9 @@ function Header({ onLogout, user }) {
   }
 
   return (
+    <Container >
     <Navbar collapseOnSelect expand="md" >
-      <Container>
+
         <Navbar.Brand href="/"><img src={logo_wg_rectangle} alt="moon icon and morgan moonchild logo in gold" className="nav-logo" />
         </Navbar.Brand>
 
@@ -26,8 +27,9 @@ function Header({ onLogout, user }) {
           <Nav.Link href="/login" onClick={handleLogout}>{user ? "Logout" : "Login" }</Nav.Link>
           </Nav>
           </Navbar.Collapse>
-      </Container>
+
     </Navbar>
+    </Container>
   )
 }
 
