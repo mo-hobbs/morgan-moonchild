@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   delete "/logout", to: "sessions#destroy"
   get '/testimonials', to: "reviews#render_reviews"
-  get '/shop', to: "products#show"
+
+
 
   # route to test your configuration
   get '/hello', to: 'application#hello_world'
