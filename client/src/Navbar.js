@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, NavDropdown, Container, Nav, Button, Row, Col } from 'react-bootstrap';
+import { Navbar, NavDropdown, Container, Nav } from 'react-bootstrap';
 import logo_wg_rectangle from './images/logo-rectangle-2.png';
 
 function Header({ onLogout, user }) {
