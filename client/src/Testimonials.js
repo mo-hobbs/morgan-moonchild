@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
+import ReviewCard from "./ReviewCard";
 
 import { Container, Row, Card } from "react-bootstrap";
 
-function Reviews() {
-    const [reviews, setReviews] = useState([]);
+function Testimonials() {
+    const [testimonials, setTestimonials] = useState([]);
+
+    const filteredArray = () => {
+        console.log(testimonials)
+    }
 
     useEffect(() => {
-        fetch(`/testimonials`).then((response) => {
+        fetch(`/reviews`).then((response) => {
             if (response.ok) {
-            response.json().then((reviews_array) => {
-                setReviews(reviews_array)
+            response.json().then((testimonials_array) => {
+                
+                setTestimonials(testimonials_array)
                 // setRendered here when deploying and comment out from 
                 // const timer to clearInterval
                 // setRendered(true)
@@ -20,8 +26,8 @@ function Reviews() {
         });
     }, []);
 
-    function renderReviews() {
-        return Object.values(reviews).map((review) => {
+    function renderTestimonials() {
+        return Object.values(testimonials).map((review) => {
             return (
                 <Container >
                     <Card className="review" key={review.id} 
@@ -46,11 +52,11 @@ function Reviews() {
     return (
         <Container>
             <Row>
-                {renderReviews()}
+                {renderTestimonials()}
             </Row>
             <br></br>
         </Container>
     )
 }
 
-export default Reviews;
+export default Testimonials;

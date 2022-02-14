@@ -12,6 +12,7 @@ import About from './About';
 import Login from './Login';
 import Shop from './Shop';
 import Product from './Product';
+import ReviewPage from './ReviewPage';
 
 
 function App() {
@@ -65,6 +66,9 @@ function App() {
           </Route>
           <Route path="/products/:id">
             <Product />
+          </Route>
+          <Route path="/reviews">
+            <ReviewPage />
           </Route>
           <Route exact path="/">
             <Home />
