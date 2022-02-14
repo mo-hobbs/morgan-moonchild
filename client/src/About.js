@@ -55,7 +55,7 @@ function About() {
             <Container >
                 <h2>FAQs</h2>
 
-            <Accordion defaultActiveKey="0" flush>
+            <Accordion flush>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header >Custom and personalized orders
                     </Accordion.Header>
@@ -95,7 +95,7 @@ function About() {
             <Container >
                 <h2>Shop Policies</h2>
 
-            <Accordion defaultActiveKey="0" flush>
+            <Accordion  flush>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header >Processing time
                     </Accordion.Header>

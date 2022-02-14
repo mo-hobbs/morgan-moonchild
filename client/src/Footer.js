@@ -23,12 +23,16 @@ function Footer() {
         <Container>
         <div className="footer">
         <Row>
-        <Image src={logo_wg_rectangle} href="/" alt="moon icon and morgan moonchild logo in gold" style={logoSize}/>
+        <a href="/">
+        <Image src={logo_wg_rectangle} href="/" alt="moon icon and morgan moonchild logo in gold" style={logoSize}/></a>
         </Row>
         <Row xs="auto" className="justify-content-md-center">
-            <Col><img src={email_icon} style={iconSize} /></Col>
-            <Col><img src={linked_in_icon} style={iconSize} /></Col>
-            <Col><img src={insta_icon} style={iconSize} /></Col>
+            <Col><a href="/contact" ><img src={email_icon} style={iconSize} alt="email icon" /></a></Col>
+            <Col>
+            <a href="https://www.linkedin.com/in/morganlhobbs/" target="_blank" ><img src={linked_in_icon} style={iconSize} alt="linked in icon" /></a></Col>
+            <Col><a href="https://www.instagram.com/morgan.moonchild/" target="_blank">
+
+            <img src={insta_icon} style={iconSize} alt="instagram-icon"/></a></Col>
         </Row>
         </div>
         </Container>
