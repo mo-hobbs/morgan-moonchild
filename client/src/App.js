@@ -11,6 +11,7 @@ import Contact from './Contact';
 import About from './About';
 import Login from './Login';
 import Shop from './Shop';
+import Product from './Product';
 
 
 function App() {
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/shop">
             <Shop />
+          </Route>
+          <Route path="/products/:id">
+            <Product />
           </Route>
           <Route exact path="/">
             <Home />

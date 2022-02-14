@@ -35,11 +35,22 @@ function ProductPage() {
     //         };
     }, []);
 
+    function handleClick(item) {
+        return <Product item={item} />
+        // return Object.values(item).map(p => 
+        //     console.log(p)
+        //     // <Product 
+        //     // p={p}
+        //     // />
+        // )
+    }
+
     function renderProducts() {
         return Object.values(products).map(p =>
                 <ProductCard 
                 key={p.id} 
                 p={p}
+                handleClick={handleClick}
                 />
         )
     }
