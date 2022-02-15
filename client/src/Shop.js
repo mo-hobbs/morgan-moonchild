@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 
 import Search from "./Search";
+import Filter from "./Filter";
+
 import ProductPage from "./ProductPage";
 import ProductCard from "./ProductCard";
 import Product from "./Product";
@@ -56,23 +58,31 @@ function Shop() {
         } else if (sortBy === "price"){
             return a.price - b.price;
         } else {
-            return a.id - b.id;
+            return b.price - a.price;;
         }
     });
     
 
-    // const updatedListings = sortedProducts.filter((product)=> {
-    //     return product.name.toLowerCase().includes(search.toLowerCase()) || product.description.toLowerCase().includes(search.toLowerCase())
-    // })
+    // const updatedListings = sortedProducts.filter((product)=> console.log(product)
+    // //  product.name.toLowerCase().includes(search.toLowerCase()) || product.description.toLowerCase().includes(search.toLowerCase())
+    // );
 
     return (
         <Container>
             <h2>Shop All</h2>
-            <Search handleSearch={handleSearch}/>
-            <ProductPage 
-                products={products}
+            <Container>
+                <Search handleSearch={handleSearch}/>
+                <Filter              
+                sortBy={sortBy} 
+                handleSort={handleSort}
+                />
+            </Container>
+            <Container >
+                <ProductPage 
+                products={sortedProducts}
                 // products={updatedListings}
                 />
+            </Container>
         </Container>    
     )
 }

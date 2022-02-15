@@ -28,8 +28,8 @@ function Home() {
             <Container>    
                 <Row >
                     <Reviews />
-                    <br></br>
-                    <Testimonials />
+                    {/* <Testimonials /> */}
+                    <Button href="/reviews" size="lg" variant="dark" style={buttonStyle}>Read More Reviews</Button> 
                 </Row>
             </Container>
         </div>
