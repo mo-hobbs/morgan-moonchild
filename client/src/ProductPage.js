@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import Product from "./Product";
 
-import { Container } from "react-bootstrap";
+import { Container, CardGroup } from "react-bootstrap";
 
 
 function ProductPage() {
@@ -57,7 +57,10 @@ function ProductPage() {
 
     return (
         <Container >
-            {renderProducts()}
+        <CardGroup >
+        {renderProducts()}
+
+        </CardGroup>
         </Container>
     )
 }
