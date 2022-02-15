@@ -19,7 +19,7 @@ function ProductCard({ p, handleClick }) {
 
                 <Card style={{ width: '24rem' }}>
                 <Card.Body>
-                    <Card.Img variant="top" src={image1.slice(9,-11)} />
+                    <Card.Img variant="top" src={image1} />
                     <Card.Title>{product_title}</Card.Title>
                         <Card.Text>${price}</Card.Text>
                 </Card.Body>

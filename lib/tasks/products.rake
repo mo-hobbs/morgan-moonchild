@@ -1,7 +1,7 @@
 namespace :products do
   desc "This task will import products from excel sheet and insert them in products table"
   task import: :environment do
-    sheet = Roo::Spreadsheet.open('./db/malas-data-20220207.xlsx')
+    sheet = Roo::Spreadsheet.open('./db/malas-data-20220207.csv')
 
 
     (2..sheet.last_row).each do |row|
