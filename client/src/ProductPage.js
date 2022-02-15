@@ -57,10 +57,9 @@ function ProductPage() {
 
     return (
         <Container >
-        <CardGroup >
-        {renderProducts()}
-
-        </CardGroup>
+            <CardGroup >
+                {renderProducts()}
+            </CardGroup>
         </Container>
     )
 }

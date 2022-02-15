@@ -1,11 +1,10 @@
 import React from "react";
-import moon_logo_gold from "./images/moon-logo-gold.png";
 import { Card } from 'react-bootstrap';
 
 
 function ProductCard({ p, handleClick }) {
 
-    const { id, product_title, description, price, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, status } = p;
+    const { id, product_title, price, image1 } = p;
 
     //figure out Redux to pass product information to the Products page
 

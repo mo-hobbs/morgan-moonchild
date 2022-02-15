@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2022_02_11_145146) do
     t.string "sku"
     t.string "category"
     t.boolean "status"
+    t.string "square_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
