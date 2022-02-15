@@ -49,39 +49,48 @@ function Product({ item }) {
                 <Col sm={8}>
                 <Carousel variant="dark">
                     <Carousel.Item>
-                     <img
-                       className="d-block w-100"
-                       src={moon_logo_gold}
-                       alt="First slide"
-                     />
-                     <Carousel.Caption>
-                       <h5>{product.product_title}</h5>
-                       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                     </Carousel.Caption>
+                        <img
+                        className="d-block w-100"
+                        src={product.image1}
+                        alt="First slide"
+                        />
                     </Carousel.Item>
                     <Carousel.Item>
-                     <img
-                       className="d-block w-100"
-                       src={moon_logo_gold}
-                       alt="Second slide"
-                     />
-                    <Carousel.Caption>
-                       <h5>Second slide label</h5>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                     </Carousel.Caption>
+                        <img
+                        className="d-block w-100"
+                        src={product.image2}
+                        alt="Second slide"
+                        />
                     </Carousel.Item>
                     <Carousel.Item>
-                     <img
-                       className="d-block w-100"
-                       src={moon_logo_gold}
-                       alt="Third slide"
-                     />
-                     <Carousel.Caption>
-                       <h5>Third slide label</h5>
-                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                     </Carousel.Caption>
-                   </Carousel.Item>
-                 </Carousel>
+                      <img
+                        className="d-block w-100"
+                        src={product.image3}
+                        alt="Third slide"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        src={product.image4}
+                        alt="Third slide"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        src={product.image5}
+                        alt="Third slide"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        src={product.image6}
+                        alt="Third slide"
+                      />
+                    </Carousel.Item>
+                  </Carousel>
                 </Col>
 
                 <Col>
