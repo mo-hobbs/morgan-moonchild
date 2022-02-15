@@ -16,7 +16,6 @@ function ProductCard({ p, handleClick }) {
     return (
         // <Card.Link  onClick={()=>productClicked()} >
             <Card.Link href={`/products/${id}`} onClick={()=>productClicked()} >
-
                 <Card style={{ width: '24rem' }}>
                 <Card.Body>
                     <Card.Img variant="top" src={image1} />
@@ -24,7 +23,7 @@ function ProductCard({ p, handleClick }) {
                         <Card.Text>${price}</Card.Text>
                 </Card.Body>
                 </Card>
-        </Card.Link>
+            </Card.Link>
     )
 }
 
