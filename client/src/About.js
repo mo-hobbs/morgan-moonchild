@@ -31,12 +31,6 @@ function About() {
             </Row>
             </Container>
 
-            <Container  >
-            <Stack className="col-md-2 mx-auto">
-                <Button className="button-style" size="md" href="/shop" variant="dark" >Shop Now</Button>
-            </Stack>
-            </Container>
-
             <Container >
             <Row>
                 <Col>
@@ -130,6 +124,12 @@ function About() {
                 </Accordion.Item>
 
             </Accordion>
+            </Container>
+
+            <Container  >
+            <Stack className="col-md-2 mx-auto">
+                <Button className="button-style" size="md" href="/shop" variant="dark" >View Malas</Button>
+            </Stack>
             </Container>
 
         </Container>

@@ -60,7 +60,7 @@ function Login({ onLogin }) {
         <br/>
         {errorState ? <p className="error">{errorState.error}</p> : null}
         <br/>
-        <Button type="submit">Login</Button>
+        <Button type="submit" variant="dark">Login</Button>
     </form>
     </Row>
         <br/>

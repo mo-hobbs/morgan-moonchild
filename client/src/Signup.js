@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 
 function Signup({ onLogin }) {
     const [username, setUsername] = useState("");
@@ -88,9 +88,9 @@ function Signup({ onLogin }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
         />
-        <br/>
+        <br></br>
         {errorState ? errorState.error.map(e => <p className="error">{e}</p>) : null}
-        <Button type="submit" className="signup">Signup</Button>
+        <Button type="submit" className="signup" variant="dark">Signup</Button>
     </form>
     );
 }
