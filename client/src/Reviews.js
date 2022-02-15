@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Container, Row, Card } from "react-bootstrap";
+import { Container, Row, Card, Button } from "react-bootstrap";
 
 function Reviews() {
     const [reviews, setReviews] = useState([]);
@@ -49,6 +49,9 @@ function Reviews() {
                 {renderReviews()}
             </Row>
             <br></br>
+            <Row>
+                <Button href="/reviews" size="lg" variant="dark" >Read More Reviews</Button>
+            </Row>
         </Container>
     )
 }

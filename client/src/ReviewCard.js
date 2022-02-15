@@ -6,7 +6,6 @@ import { Container, Card } from "react-bootstrap";
 function ReviewCard({ review }) {
     return (
         <Container >
-
             <Card className="review" >
                 <Card.Header>★★★★★</Card.Header>
                 <Card.Body>
