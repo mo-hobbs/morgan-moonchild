@@ -7,18 +7,21 @@ import Header from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
 
+
 import Contact from './Contact';
 import About from './About';
 import Login from './Login';
 import Shop from './Shop';
 import Product from './Product';
 import ReviewPage from './ReviewPage';
+import ProductPage from './ProductPage';
 
 
 function App() {
   //this was from setup to check sessions working
   // const [count, setCount] = useState(0);
   const [user, setUser] = useState(null);
+
 
   //this was from setup to check sessions working
   // useEffect(() => {

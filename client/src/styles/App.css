@@ -2,6 +2,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+a:hover, a:focus {
+  color: #968F71;
+}
+
 /* .myStyle {
   color: #a35748;
   background: #64322d;

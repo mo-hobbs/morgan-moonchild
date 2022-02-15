@@ -48,10 +48,6 @@ function Reviews() {
             <Row>
                 {renderReviews()}
             </Row>
-            <br></br>
-            <Row>
-                <Button href="/reviews" size="lg" variant="dark" >Read More Reviews</Button>
-            </Row>
         </Container>
     )
 }
