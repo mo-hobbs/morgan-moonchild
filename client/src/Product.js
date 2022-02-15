@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import moon_logo_gold from "./images/moon-logo-gold.png";
 
-import { Container, Row, Col, Carousel, Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
+
+import { Container, Row, Col, Carousel, Card, ListGroup, ListGroupItem, Button } from "react-bootstrap";
+
 
 function Product({ item }) {
 
@@ -96,9 +96,16 @@ function Product({ item }) {
                 <Col>
                     <Card>
                         <Card.Body>
-                        <Card.Title>{product.product_title}</Card.Title>
-                        <Card.Text>${product.price}</Card.Text>
-                </Card.Body>
+                          <Card.Header>
+                            <Card.Title>{product.product_title}</Card.Title>
+                          </Card.Header>
+                          <ListGroup className="list-group-flush">
+                            <ListGroupItem>${product.price}</ListGroupItem>
+                            <ListGroupItem><Button variant="dark">Go somewhere</Button></ListGroupItem>
+                            <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                          </ListGroup>
+
+                        </Card.Body>
                     </Card>
                 </Col>
             </Row>

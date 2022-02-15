@@ -94,14 +94,14 @@ function About() {
                     <Accordion.Header >Processing time
                     </Accordion.Header>
                 <Accordion.Body>
-                In stock items ship within 1-3 days.  Made to order items take 2-3 weeks for processing.
+                In stock items ship within 1-3 days.  Made to order items take 2-4 weeks for processing.
                 </Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="1">
                 <Accordion.Header>Shipping</Accordion.Header>
                 <Accordion.Body>
-                Orders are shipped with a tracking number via USPS priority mail. They usually estimate 4-8 days for shipping time.  
+                Orders are shipped with a tracking number via USPS priority mail. They usually estimate 7-10 days for shipping time.  
                 </Accordion.Body>
                 </Accordion.Item>
 

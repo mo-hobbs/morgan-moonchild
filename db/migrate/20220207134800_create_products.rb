@@ -2,6 +2,7 @@ class CreateProducts < ActiveRecord::Migration[6.1]
   def change
     create_table :products do |t|
       t.string :product_title
+      t.string :product_subtitle
       t.text :description
       t.integer :price
       t.string :currency_code
@@ -21,7 +22,7 @@ class CreateProducts < ActiveRecord::Migration[6.1]
       t.string :sku
       t.string :category
       t.boolean :status
-
+      t.string :square_url
       t.timestamps
     end
   end
