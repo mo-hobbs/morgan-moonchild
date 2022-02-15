@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-
 import { Container, Row, Col, Carousel, Card, ListGroup, ListGroupItem, Button } from "react-bootstrap";
+import ReviewCard from "./ReviewCard";
 
+function Product() {
 
-function Product({ item }) {
-
-    // console.log(item)
     const { id } = useParams();
     
     const [product, setProduct] = useState([]);
-
-
-    console.log(product)
 
     useEffect(() => {
         fetch(`/products/${id}`).then((response) => {
@@ -39,14 +33,24 @@ function Product({ item }) {
     //         // ✅ clear the interval so state is no longer updated
     //         clearInterval(timer);
     //         };
-    }, []);
+    }, [id]);
 
+    //DRY - add a function to render each image and add an image footer with the product_title
+    //put each carousel item in a card with a footer?
 
     return (
 
         <Container>
             <Row>
                 <Col sm={8}>
+                <Card border="light">
+                  <Card.Body>
+                    <Card.Header>
+                      <Card.Title>{product.product_title}</Card.Title>
+                    </Card.Header>
+                  </Card.Body>
+                </Card>
+
                 <Carousel variant="dark">
                     <Carousel.Item>
                         <img
@@ -91,18 +95,24 @@ function Product({ item }) {
                       />
                     </Carousel.Item>
                   </Carousel>
+
+                  
+            
+
                 </Col>
 
                 <Col>
-                    <Card>
+                    <Card  border="light">
                         <Card.Body>
-                          <Card.Header>
-                            <Card.Title>{product.product_title}</Card.Title>
-                          </Card.Header>
                           <ListGroup className="list-group-flush">
-                            <ListGroupItem>${product.price}</ListGroupItem>
-                            <ListGroupItem><Button variant="dark">Go somewhere</Button></ListGroupItem>
-                            <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                            <ListGroupItem>{product.description}</ListGroupItem>
+                            <ListGroupItem className="text-center">
+                              <Card.Title>
+                                ${product.price}
+                              </Card.Title>
+                            </ListGroupItem>
+                            <Button variant="dark" size="md" href={product.square_url} target="_blank">Checkout</Button>
+                            
                           </ListGroup>
 
                         </Card.Body>
