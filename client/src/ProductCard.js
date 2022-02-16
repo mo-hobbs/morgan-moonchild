@@ -17,7 +17,7 @@ function ProductCard({ p, handleClick }) {
       href={`/products/${id}`}
       onClick={() => productClicked()}
     >
-      <Card className="mb-3 me-3" style={{ width: "20rem" }} >
+      <Card className="mb-3 mx-auto" style={{ width: "16rem" }} >
         <Card.Body style={{ color: "#968F71" }}>
           <Card.Img variant="top" src={image1} />
           <Card.Title className="mt-2 text-truncate">{product_title}</Card.Title>

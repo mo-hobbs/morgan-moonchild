@@ -74,7 +74,7 @@ function Shop() {
   // );
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 mx-auto">
       <Row className="mb-3 text-center">
         <h2>Shop All</h2>
       </Row>
