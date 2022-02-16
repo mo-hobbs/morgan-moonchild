@@ -1,17 +1,40 @@
 import React from "react";
 
+import search_icon from "./images/search_icon.png";
+
+import { Form, FormControl, Button, Row, Col } from "react-bootstrap";
+
 function Search({ handleSearch }) {
-    return (
-        <div className="searchbar">
-            <label htmlFor="search">Search Products:</label>
-            <input
-            type="text"
-            id="search"
-            placeholder="Type a product name to search..."
-            onChange={(e) => handleSearch(e.target.value)}
+  return (
+    <Form className="d-flex">
+      <Form.Group className="mb-3">
+        <Form.Label>
+          <h5>Search</h5>
+        </Form.Label>
+        <Row>
+          <Col>
+            <Form.Control
+              id="search"
+              onChange={(e) => handleSearch(e.target.value)}
+              type="search"
+              className="me-2"
+              aria-label="Search"
             />
-        </div>
-    );
+          </Col>
+          <Col xl={1} className="px-0">
+            <Button className="btn-light btn-xs px-0 ">
+              <img src={search_icon} />
+            </Button>
+          </Col>
+        </Row>
+        <Row>
+          <Form.Text className="text-muted">
+            Search for a product by name or description...
+          </Form.Text>
+        </Row>
+      </Form.Group>
+    </Form>
+  );
 }
 
 export default Search;

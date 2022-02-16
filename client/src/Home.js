@@ -6,43 +6,38 @@ import Testimonials from "./Testimonials";
 import { Button, Container, Row, Col } from "react-bootstrap";
 
 function Home() {
-  const buttonStyle = {
-    padding: "0.5rem 2rem",
-    marginLeft: "auto",
-    marginRight: "auto",
-  };
-
   return (
-    <div className="home">
-      <Container>
+    <>
+      <Container className="home">
         <Row>
           <FeaturedItems />
         </Row>
         <Row xs={2} md={4}>
-          <Button href="/shop" size="lg" variant="dark" style={buttonStyle}>
+          <Button
+            className="mt-3 mb-3 mx-auto"
+            href="/shop"
+            size="lg"
+            variant="dark"
+          >
             Shop All Malas
           </Button>
         </Row>
       </Container>
-      <br></br>
       <Container>
-
-          <Reviews />
-          {/* <Testimonials /> */}
-          <Row md={3}>
+        <Reviews />
+        {/* <Testimonials /> */}
+        <Row xs={2} md={4}>
           <Button
-            className="mt-3"
+            className="mt-3 mb-3 mx-auto"
             href="/reviews"
             size="lg"
             variant="dark"
-            style={buttonStyle}
           >
             Read More Reviews
           </Button>
-          </Row>
-
+        </Row>
       </Container>
-    </div>
+    </>
   );
 }
 
