@@ -44,7 +44,7 @@ function Signup({ onLogin }) {
     return (
 
      
-            <Form  class="col-3" onSubmit={handleSubmit} className="login-form mb-3">
+            <Form onSubmit={handleSubmit} className="login-form mb-3">
                 <h2>Signup</h2>
 
                 <Form.Group className="mb-3">
