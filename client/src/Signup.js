@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Form, Container } from "react-bootstrap";
 
 function Signup({ onLogin }) {
     const [username, setUsername] = useState("");
@@ -42,56 +42,65 @@ function Signup({ onLogin }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-        <h2>Signup</h2>
-        <label>Username: </label>
-        <input
-            type="username"
-            id="username"
-            autoComplete="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-        />
-        <br/>
-        <label>Password: </label>
-        <input
-            type="password"
-            id="new-password"
-            autoComplete="new-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-        />
-        <br></br>
-        <label>Confirm Password: </label>
-        <input
-            type="password"
-            id="password_confirmation"
-            autoComplete="new-password"
-            value={passwordConfirmation}
-            onChange={(e) => setPasswordConfirmation(e.target.value)}
-        />
-        <br/>
-        <label>Full Name: </label>
-        <input
-            type="fullName"
-            id="fullName"
-            autoComplete="name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-        />
-        <br/>
-        <label>Email: </label>
-        <input
-            type="email"
-            id="email"
-            autoComplete="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-        />
-        <br></br>
-        {errorState ? errorState.error.map(e => <p className="error">{e}</p>) : null}
-        <Button type="submit" className="signup" variant="dark">Signup</Button>
-    </form>
+
+     
+            <Form  class="col-3" onSubmit={handleSubmit} className="login-form mb-3">
+                <h2>Signup</h2>
+
+                <Form.Group className="mb-3">
+                    <Form.Control
+                        type="username"
+                        id="login-username"
+                        autoComplete="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Username" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Control
+                        type="current-password"
+                        id="current-password"
+                        autoComplete="current-password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Control
+                    type="password"
+                    id="password_confirmation"
+                    autoComplete="new-password"
+                    value={passwordConfirmation}
+                    onChange={(e) => setPasswordConfirmation(e.target.value)}
+                        placeholder="Confirm password" />
+                </Form.Group>
+
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Control
+                    type="fullName"
+                    id="fullName"
+                    autoComplete="name"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    placeholder="Full name" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" >
+                    <Form.Control
+                    type="email"
+                    id="email"
+                    autoComplete="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} 
+                    placeholder="Email" />
+                </Form.Group>
+                {errorState ? errorState.error.map(e => <p className="error">{e}</p>) : null}
+                <Button type="submit" className="signup" variant="dark">Signup</Button>
+            </Form>
+
     );
 }
 
