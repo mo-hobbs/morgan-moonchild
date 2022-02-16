@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Image, Row, Col } from "react-bootstrap";
 import logo_wg_rectangle from "./images/logo-rectangle-2.png";
+import footer from "./images/footer-400x100.png";
 import email_icon from "./images/email-gold.png";
 import linked_in_icon from "./images/linked-in-gold.png";
 import insta_icon from "./images/insta-gold.png";
@@ -20,13 +21,13 @@ function Footer() {
 
   return (
     <Container className="footer">
-      <Row>
+      <Row xs="auto" className="justify-content-center mt-5">
         <a href="/">
           <Image
-            src={logo_wg_rectangle}
+            className="justify-content-center"
+            src={footer}
             href="/"
             alt="moon icon and morgan moonchild logo in gold"
-            style={logoSize}
           />
         </a>
       </Row>
@@ -48,7 +49,7 @@ function Footer() {
         </Col>
       </Row>
       <Row className="text-center" style={{color: "#968F71"}}>
-        <p><small>© 2020</small></p>
+        <p><small>© 2020 Morgan Moonchild Inc.</small></p>
       </Row>
     </Container>
   );

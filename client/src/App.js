@@ -7,7 +7,7 @@ import Header from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
 
-
+import WelcomePage from './WelcomePage';
 import Contact from './Contact';
 import About from './About';
 import Login from './Login';
@@ -40,7 +40,7 @@ function App() {
 
   function handleLogin() {
     if (user) {
-      return <h2>Welcome, {user.username}!</h2>;
+      return <WelcomePage user={user} />
     } else {
       return <Login onLogin={setUser} user={user} />;
     }
