@@ -21,8 +21,8 @@ function Header({ onLogout, user }) {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto"/>
-          <Nav>
+        <Nav className="ms-auto">
+
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/shop">Shop</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>

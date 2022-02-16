@@ -26,13 +26,12 @@ function Home() {
       </Container>
       <br></br>
       <Container>
-        <Row>
+
           <Reviews />
           {/* <Testimonials /> */}
-
+          <Row md={3}>
           <Button
-            as={Col}
-            className="mx-2"
+            className="mt-3"
             href="/reviews"
             size="lg"
             variant="dark"
@@ -40,7 +39,8 @@ function Home() {
           >
             Read More Reviews
           </Button>
-        </Row>
+          </Row>
+
       </Container>
     </div>
   );
