@@ -5,6 +5,7 @@ import search_icon from "./images/search_icon.png";
 import { Form, FormControl, Button, Row, Col } from "react-bootstrap";
 
 function Search({ handleSearch }) {
+
   return (
     <Form className="d-flex">
       <Form.Group className="mb-3">
