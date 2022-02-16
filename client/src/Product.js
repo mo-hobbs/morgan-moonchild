@@ -105,7 +105,7 @@ function Product() {
                     <Card  border="light">
                         <Card.Body>
                           <ListGroup className="list-group-flush">
-                            <ListGroupItem>{product.description}</ListGroupItem>
+                            <ListGroupItem style={{ whiteSpace: "pre-wrap"}}>{product.description}</ListGroupItem>
                             <ListGroupItem className="text-center">
                               <Card.Title>
                                 ${product.price}
