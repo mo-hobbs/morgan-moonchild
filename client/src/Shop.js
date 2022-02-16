@@ -14,7 +14,7 @@ function Shop() {
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("");
 
   // const [isRendered, setRendered] = useState(false);
 
@@ -59,7 +59,7 @@ function Shop() {
     setCategory(selection);
   }
 
-  const sortedProducts = [...products].sort((a, b) => {
+  const sortedProducts = [...products].filter((p) => p.category === category || category === "all").sort((a, b) => {
     if (sortBy === "name") {
       return a.name - b.name;
     } else if (sortBy === "price") {
@@ -69,12 +69,10 @@ function Shop() {
     }
   });
 
-  // const updatedListings = sortedProducts.filter((product)=> console.log(product)
-  // //  product.name.toLowerCase().includes(search.toLowerCase()) || product.description.toLowerCase().includes(search.toLowerCase())
-  // );
+  // const updatedListings = sortedProducts.filter((product)=> product.name.toLowerCase().includes(search.toLowerCase()) || product.description.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 mx-auto">
       <Row className="mb-3 text-center">
         <h2>Shop All</h2>
       </Row>

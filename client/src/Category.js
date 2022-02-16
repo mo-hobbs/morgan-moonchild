@@ -11,25 +11,21 @@ function Category({ handleCategory, category }) {
     <Form className="mb-3 mt-5">
       <Form.Group>
         <Form.Label>
-          {" "}
           <h5>Category:</h5>
         </Form.Label>
         <Form.Select
-          multiple
-          aria-label="multiple select example"
-          onChange={handleCategory}
+          aria-label="Default select example"
+          onChange={handleSelect}
           value={category}
-          className="form-select input-bg"
+          className="form-select"
         >
-          <option selected value="All">
-            All
-          </option>
-          <option value="grounding">Grounding Vibes</option>
-          <option value="high">High Vibes</option>
-          <option value="protect">Protect Your Vibes</option>
-          <option value="balance">Balancing Vibes</option>
-          <option value="mini">Mini Malas</option>
-          <option value="custom">Made to Order</option>
+          <option value="all">All</option>
+          <option value="grounding vibes">Grounding Vibes</option>
+          <option value="high vibes">High Vibes</option>
+          <option value="protect your vibes">Protect Your Vibes</option>
+          <option value="balancing vibes">Balancing Vibes</option>
+          <option value="mini malas">Mini Malas</option>
+          <option value="made to order">Made to Order</option>
         </Form.Select>
       </Form.Group>
     </Form>
