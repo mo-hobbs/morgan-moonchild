@@ -11,9 +11,9 @@ function About() {
         <Container >
 
             <Container>
-            <Row >
+            <Row className="mb-5">
                 <Col>
-                    <img className="about_photos" src={wood_malas} alt="three mala necklaces made with different types of wood: red sandalwood, cedar, and brown sandalwood" />
+                    <img className="about_photos rounded mx-auto d-block" src={wood_malas} alt="three mala necklaces made with different types of wood: red sandalwood, cedar, and brown sandalwood" />
                 </Col>
                 <Col>
                     <h2>Welcome</h2>
@@ -31,8 +31,8 @@ function About() {
             </Row>
             </Container>
 
-            <Container >
-            <Row>
+            <Container className="mb-5" >
+            <Row >
                 <Col>
                     <h2>About the Owner</h2>
                     <p>Morgan Moonchild is a one woman small business. I am based in a home studio in Washington, D.C. I am passionate about yoga, meditation, health, and wellness. I began creating malas after completing a 200-hour Yoga Teacher Training in Goa, India in 2019. I started selling malas in March 2020 at the beginning of the pandemic to help others find calm and balance.
@@ -41,12 +41,12 @@ function About() {
                     I use all natural, genuine gemstones. Most stones are grade AAA - the highest quality rating for gemstones and crystals. All items are designed and hand knotted in my home studio with sustainability in mind.</p>
                 </Col>
                 <Col>
-                    <img className="about_photos" src={owner_photo_1} alt="photograph of the shop owner" />
+                    <img className="about_photos rounded mx-auto d-block" src={owner_photo_1} alt="photograph of the shop owner" />
                 </Col>
             </Row>
             </Container>
 
-            <Container >
+            <Container className="mb-5">
                 <h2>FAQs</h2>
 
             <Accordion flush>
@@ -126,10 +126,8 @@ function About() {
             </Accordion>
             </Container>
 
-            <Container  >
-            <Stack className="col-md-2 mx-auto">
-                <Button className="button-style" size="md" href="/shop" variant="dark" >View Malas</Button>
-            </Stack>
+            <Container className="col-md-4 text-center" >
+                <Button  size="lg" href="/shop" variant="dark" >Shop All Malas</Button>
             </Container>
 
         </Container>
