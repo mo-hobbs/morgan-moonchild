@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import Search from "./Search";
 import Sort from "./Sort";
+import Category from "./Category";
 
 import ProductPage from "./ProductPage";
 import ProductCard from "./ProductCard";
@@ -13,6 +14,8 @@ function Shop() {
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState("All");
+
   // const [isRendered, setRendered] = useState(false);
 
   useEffect(() => {
@@ -52,6 +55,10 @@ function Shop() {
     setSortBy(dropdown);
   }
 
+  function handleCategory(selection) {
+    setCategory(selection);
+  }
+
   const sortedProducts = [...products].sort((a, b) => {
     if (sortBy === "name") {
       return a.name - b.name;
@@ -76,6 +83,7 @@ function Shop() {
           <Container>
             <Search handleSearch={handleSearch} />
             <Sort sortBy={sortBy} handleSort={handleSort} />
+            <Category category={category} handleCategory={handleCategory}/>
           </Container>
         </Col>
         <Col>
