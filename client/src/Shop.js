@@ -14,7 +14,7 @@ function Shop() {
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState("");
 
   // const [isRendered, setRendered] = useState(false);
 
