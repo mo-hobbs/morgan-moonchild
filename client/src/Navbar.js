@@ -10,8 +10,8 @@ function Header({ onLogout, user }) {
   }
 
   return (
-    <Container>
-      <Navbar collapseOnSelect expand="lg">
+    <Navbar collapseOnSelect expand="lg" >
+      <Container>
         <Navbar.Brand href="/">
           <img
             src={logo_wg_rectangle}
@@ -19,10 +19,10 @@ function Header({ onLogout, user }) {
             className="nav-logo"
           />
         </Navbar.Brand>
-
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+        <Nav className="me-auto"/>
+          <Nav>
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/shop">Shop</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
@@ -33,8 +33,8 @@ function Header({ onLogout, user }) {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
-    </Container>
+      </Container>
+    </Navbar>
   );
 }
 
