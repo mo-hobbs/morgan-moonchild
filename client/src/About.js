@@ -6,7 +6,7 @@ import { Container, Row, Col, Button, Stack, Accordion } from "react-bootstrap";
 
 function About() {
   return (
-    <Container>
+    <Container className="mt-4">
       <Container>
         <Row className="mb-5">
           <Col>

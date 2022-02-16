@@ -50,10 +50,10 @@ function ReviewPage() {
   }
 
   return (
-    <Container>
+    <Container className="mt-4 mb-4">
       <h2>Reviews and Testimonials</h2>
       {renderReviews()}
-      {filteredReviews()}
+      {/* {filteredReviews()} */}
       <Button href="/shop" size="lg" variant="dark" style={buttonStyle}>
         Shop All Malas
       </Button>

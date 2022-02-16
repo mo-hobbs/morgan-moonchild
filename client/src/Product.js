@@ -47,7 +47,7 @@ function Product() {
   //put each carousel item in a card with a footer?
 
   return (
-    <Container>
+    <Container className="mt-4">
       <Row>
         <Card border="light">
           <Card.Body>

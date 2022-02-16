@@ -9,7 +9,7 @@ import feature_3 from "./images/malas-800x400-2.png";
 
 function FeaturedItems() {
   return (
-    <Carousel className="mb-3" variant="dark">
+    <Carousel className="mb-3 mt-4" variant="dark">
       <Carousel.Item>
         <img
           className="d-block w-100"

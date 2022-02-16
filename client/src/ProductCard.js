@@ -22,8 +22,8 @@ function ProductCard({ p, handleClick }) {
       <Card style={{ width: "20rem" }}>
         <Card.Body style={productCardStyle}>
           <Card.Img variant="top" src={image1} />
-          <Card.Title>{product_title}</Card.Title>
-          <Card.Text>${price}</Card.Text>
+          <Card.Title className="mt-2">{product_title}</Card.Title>
+          <Card.Footer>${price}</Card.Footer>
         </Card.Body>
       </Card>
     </Card.Link>

@@ -40,7 +40,7 @@ function Contact() {
   }
 
   return (
-    <Container>
+    <Container className="mt-4">
       <Form onSubmit={handleSubmit}>
         <h2>Contact</h2>
         <p>Happy to help and answer any questions</p>

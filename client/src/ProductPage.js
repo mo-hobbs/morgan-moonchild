@@ -22,7 +22,7 @@ function ProductPage({ products }) {
   }
 
   return (
-    <Container>
+    <Container className="mt-4">
       <CardGroup>{renderProducts()}</CardGroup>
     </Container>
   );

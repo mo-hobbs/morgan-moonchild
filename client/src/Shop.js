@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Search from "./Search";
-import Filter from "./Filter";
+import Sort from "./Sort";
 
 import ProductPage from "./ProductPage";
 import ProductCard from "./ProductCard";
@@ -67,18 +67,26 @@ function Shop() {
   // );
 
   return (
-    <Container>
-      <h2>Shop All</h2>
-      <Container>
-        <Search handleSearch={handleSearch} />
-        <Filter sortBy={sortBy} handleSort={handleSort} />
-      </Container>
-      <Container>
-        <ProductPage
-          products={sortedProducts}
-          // products={updatedListings}
-        />
-      </Container>
+    <Container className="mt-4">
+      <Row className="mb-3 text-center">
+        <h2>Shop All</h2>
+      </Row>
+      <Row>
+        <Col lg={3}>
+          <Container>
+            <Search handleSearch={handleSearch} />
+            <Sort sortBy={sortBy} handleSort={handleSort} />
+          </Container>
+        </Col>
+        <Col>
+          <Container>
+            <ProductPage
+              products={sortedProducts}
+              // products={updatedListings}
+            />
+          </Container>
+        </Col>
+      </Row>
     </Container>
   );
 }
