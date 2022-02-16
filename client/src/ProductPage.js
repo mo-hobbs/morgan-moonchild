@@ -4,38 +4,28 @@ import Product from "./Product";
 
 import { Container, CardGroup } from "react-bootstrap";
 
-
 function ProductPage({ products }) {
+  function handleClick(item) {
+    return <Product item={item} />;
+    // return Object.values(item).map(p =>
+    //     console.log(p)
+    //     // <Product
+    //     // p={p}
+    //     // />
+    // )
+  }
 
+  function renderProducts() {
+    return Object.values(products).map((p) => (
+      <ProductCard key={p.id} p={p} handleClick={handleClick} />
+    ));
+  }
 
-    function handleClick(item) {
-        return <Product item={item} />
-        // return Object.values(item).map(p => 
-        //     console.log(p)
-        //     // <Product 
-        //     // p={p}
-        //     // />
-        // )
-    }
-
-    function renderProducts() {
-        return Object.values(products).map(p =>
-                <ProductCard 
-                key={p.id} 
-                p={p}
-                handleClick={handleClick}
-                />
-        )
-    }
-
-    return (
-        <Container >
-            <CardGroup >
-                {renderProducts()}
-            </CardGroup>
-        </Container>
-    )
+  return (
+    <Container>
+      <CardGroup>{renderProducts()}</CardGroup>
+    </Container>
+  );
 }
-
 
 export default ProductPage;
