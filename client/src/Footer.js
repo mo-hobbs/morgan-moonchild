@@ -31,7 +31,7 @@ function Footer() {
           />
         </a>
       </Row>
-      <Row xs="auto" className="justify-content-md-center">
+      <Row xs="auto" className="justify-content-center">
         <Col>
           <a href="/contact">
             <img src={email_icon} style={iconSize} alt="email icon" />
