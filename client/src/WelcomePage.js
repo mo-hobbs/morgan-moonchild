@@ -16,7 +16,7 @@ function WelcomePage({ user }) {
         className="mt-3 mb-3 mx-auto"
         variant="dark"
         size="md"
-        href="/about"
+        href="/learn"
         target="_blank"
       >
         Learn more about meditation

@@ -12,6 +12,7 @@ import Contact from './Contact';
 import About from './About';
 import Login from './Login';
 import Shop from './Shop';
+import Learn from './Learn';
 import Product from './Product';
 import ReviewPage from './ReviewPage';
 import ProductPage from './ProductPage';
@@ -55,6 +56,12 @@ function App() {
       <div className="App">
         <Header user={user} onLogout={handleLogout}/>
         <Switch>
+        <Route path="/shop">
+            <Shop />
+          </Route>
+          <Route path="/learn">
+            <Learn />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -64,9 +71,7 @@ function App() {
           <Route path="/login">
             {handleLogin()}
           </Route>
-          <Route path="/shop">
-            <Shop />
-          </Route>
+
           <Route path="/products/:id">
             <Product />
           </Route>
