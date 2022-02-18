@@ -54,7 +54,7 @@ function Login({ onLogin }) {
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
-                  type="current-password"
+                  type="password"
                   id="current-password"
                   autoComplete="current-password"
                   value={password}
