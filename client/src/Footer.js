@@ -49,7 +49,7 @@ function Footer() {
         </Col>
       </Row>
       <Row className="text-center" style={{color: "#968F71"}}>
-        <p><small>© 2020 Morgan Moonchild Inc.</small></p>
+        <p><small>© 2022 Morgan Moonchild Inc.</small></p>
       </Row>
     </Container>
   );
