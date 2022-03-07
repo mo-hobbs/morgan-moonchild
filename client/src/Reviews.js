@@ -1,3 +1,5 @@
+import ReviewCard from "./ReviewCard";
+
 import React, { useEffect, useState } from "react";
 
 import { Container, Row, Card, Button } from "react-bootstrap";
@@ -23,17 +25,7 @@ function Reviews() {
   function renderReviews() {
     return Object.values(reviews).map((review) => {
       return (
-        <Container className="mb-4">
-          <Card className="review" key={review.id} review={review}>
-            <Card.Header>★★★★★</Card.Header>
-            <Card.Body>
-              <blockquote className="blockquote mb-0">
-                <p>{review.message}</p>
-                <footer className="blockquote-footer">{review.reviewer}</footer>
-              </blockquote>
-            </Card.Body>
-          </Card>
-        </Container>
+        <ReviewCard key={review.id} review={review} />
       );
     });
   }

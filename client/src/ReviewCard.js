@@ -3,8 +3,10 @@ import React from "react";
 import { Container, Card } from "react-bootstrap";
 
 function ReviewCard({ review }) {
+  //add function to render the correct number of stars 
+
   return (
-    <Container>
+    <Container className="mb-4">
       <Card className="review">
         <Card.Header>★★★★★</Card.Header>
         <Card.Body>

@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
-import Testimonials from "./Testimonials";
 
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Row } from "react-bootstrap";
 
 function ReviewPage() {
   const [reviews, setReviews] = useState([]);
-
-  const buttonStyle = {
-    padding: "0.5rem 2rem",
-    marginLeft: "auto",
-    marginRight: "auto",
-  };
 
   useEffect(() => {
     fetch(`/reviews`).then((response) => {
@@ -35,16 +28,7 @@ function ReviewPage() {
         return 0.5 - Math.random();
       })
       .slice(25);
-    // return <Testimonials randomArray={randomArray} />
     return Object.values(randomArray).map((review) => (
-      <ReviewCard key={review.id} review={review} />
-    ));
-    // randomArray.map((review) => setEachReview(review))
-    // console.log(eachReview);
-  }
-
-  function renderReviews() {
-    return Object.values(reviews).map((review) => (
       <ReviewCard key={review.id} review={review} />
     ));
   }
@@ -52,11 +36,17 @@ function ReviewPage() {
   return (
     <Container className="mt-4 mb-4">
       <h2>Reviews and Testimonials</h2>
-      {renderReviews()}
-      {/* {filteredReviews()} */}
-      <Button href="/shop" size="lg" variant="dark" style={buttonStyle}>
+      {filteredReviews()}
+      <Row xs={2} md={4}>
+      <Button
+        href="/shop"
+        size="lg"
+        variant="dark"
+        className="mt-3 mb-3 mx-auto"
+      >
         Shop All Malas
       </Button>
+      </Row>
       <br></br>
     </Container>
   );
