@@ -1,8 +1,6 @@
 import React from "react";
 import FeaturedItems from "./FeaturedItems";
 import Reviews from "./Reviews";
-import Testimonials from "./Testimonials";
-
 
 import { Button, Container, Row, Col } from "react-bootstrap";
 
