@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+E-commerce platform with data syncing to an Etsy shop.
 
-Things you may want to cover:
+Utilized Roo gem to import .CSV data into PostgreSQL database to store product information for client-side UI. 
 
-* Ruby version
+Developed frontend UI using Figma for design and React Bootstrap wireframe for CSS components. 
 
-* System dependencies
+Implemented authentication/authorization with bcrypt gem to allow users to login and logout securely. 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

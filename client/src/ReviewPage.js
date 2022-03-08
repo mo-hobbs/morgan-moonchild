@@ -21,7 +21,6 @@ function ReviewPage() {
     });
   }, []);
 
-  //id like to get the filtered reviews to render on the Home page
   function filteredReviews() {
     const randomArray = Object.values(reviews)
       .sort(function (a, b) {
@@ -47,7 +46,6 @@ function ReviewPage() {
         Shop All Malas
       </Button>
       </Row>
-      <br></br>
     </Container>
   );
 }
