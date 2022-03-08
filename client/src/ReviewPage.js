@@ -21,13 +21,12 @@ function ReviewPage() {
     });
   }, []);
 
-  //id like to get the filtered reviews to render on the Home page
   function filteredReviews() {
     const randomArray = Object.values(reviews)
       .sort(function (a, b) {
         return 0.5 - Math.random();
       })
-      .slice(25);
+      .slice(208);
     return Object.values(randomArray).map((review) => (
       <ReviewCard key={review.id} review={review} />
     ));
@@ -47,7 +46,6 @@ function ReviewPage() {
         Shop All Malas
       </Button>
       </Row>
-      <br></br>
     </Container>
   );
 }
