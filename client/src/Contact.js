@@ -5,10 +5,14 @@ function Contact() {
   const [errorState, setErrorState] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [inquiryType, setInquiryType] = useState("");
+  const [inquiry_type, setInquiryType] = useState("General Question");
   const [message, setMessage] = useState("");
 
-  //add function to display a successful contact submit
+  //add function to display a successful contact submission
+
+  function handleChange(e) {
+    setInquiryType(e.target.value);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -21,18 +25,16 @@ function Contact() {
       body: JSON.stringify({
         name,
         email,
-        inquiryType,
+        inquiry_type,
         message,
       }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {
-          console.log(data);
           setErrorState(null);
         });
       } else {
         r.json().then((errors) => {
-          console.log(errors);
           setErrorState(errors);
         });
       }
@@ -71,19 +73,11 @@ function Contact() {
 
         <Form.Group>
           <Form.Select aria-label="Default select example">
-            <option name="inquiry_type">Type of inquiry</option>
-            <option
-              value={inquiryType}
-              onSelect={(e) => setInquiryType(e.target.value)}
-            >
-              General Question
+            <option value="Inquiry Type" onChange={handleChange}>
+              Type of inquiry
             </option>
-            <option
-              value={inquiryType}
-              onSelect={(e) => setInquiryType(e.target.value)}
-            >
-              Wholesale Inquiry
-            </option>
+            <option value="General Question">General Question</option>
+            <option value="Wholesale Inquiry">Wholesale Inquiry</option>
           </Form.Select>
         </Form.Group>
 
@@ -101,6 +95,13 @@ function Contact() {
         <Button variant="dark" type="submit">
           Submit
         </Button>
+        {errorState
+          ? errorState.error.map((e) => (
+              <p class="error" style={{ color: "red" }}>
+                {e}
+              </p>
+            ))
+          : null}
       </Form>
     </Container>
   );
