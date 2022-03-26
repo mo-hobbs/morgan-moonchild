@@ -72,7 +72,7 @@ function App() {
             {handleLogin()}
           </Route>
 
-          <Route path="/products/:id">
+          <Route path="/shop/:id">
             <Product />
           </Route>
           <Route path="/reviews">
