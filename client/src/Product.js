@@ -12,10 +12,12 @@ import {
 } from "react-bootstrap";
 import ReviewCard from "./ReviewCard";
 
-function Product() {
+function Product( { item } ) {
   const { id } = useParams();
 
   const [product, setProduct] = useState([]);
+
+  console.log({item})
 
   useEffect(() => {
     fetch(`/products/${id}`).then((response) => {
