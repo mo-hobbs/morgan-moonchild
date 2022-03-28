@@ -76,7 +76,7 @@ function App() {
           <Route path="/mala/:id">
             <Product />
           </Route>
-          <Route path="/reviews">
+          <Route path="/review">
             <ReviewPage />
           </Route>
           <Route exact path="/">

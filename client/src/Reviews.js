@@ -2,7 +2,7 @@ import ReviewCard from "./ReviewCard";
 
 import React, { useEffect, useState } from "react";
 
-import { Container, Row, Card, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
