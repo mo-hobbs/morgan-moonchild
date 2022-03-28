@@ -28,7 +28,7 @@ function Home() {
         <Row xs={2} md={4}>
           <Button
             className="mt-3 mb-3 mx-auto"
-            href="/reviews"
+            href="/review"
             size="lg"
             variant="dark"
           >
