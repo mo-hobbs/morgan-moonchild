@@ -26,7 +26,7 @@ function ReviewPage() {
       .sort(function (a, b) {
         return 0.5 - Math.random();
       })
-      .slice(208);
+      .slice(18);
     return Object.values(randomArray).map((review) => (
       <ReviewCard key={review.id} review={review} />
     ));
