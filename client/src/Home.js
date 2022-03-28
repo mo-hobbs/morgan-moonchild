@@ -26,14 +26,14 @@ function Home() {
         <Reviews />
         {/* <Testimonials /> */}
         <Row xs={2} md={4}>
-          {/* <Button
+          <Button
             className="mt-3 mb-3 mx-auto"
             href="/reviews"
             size="lg"
             variant="dark"
           >
             Read More Reviews
-          </Button> */}
+          </Button>
         </Row>
       </Container>
     </>
