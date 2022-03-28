@@ -14,6 +14,7 @@ import Login from './Login';
 import Shop from './Shop';
 import Learn from './Learn';
 import Product from './Product';
+import ProductCard from './ProductCard';
 import ReviewPage from './ReviewPage';
 import ProductPage from './ProductPage';
 
@@ -72,7 +73,7 @@ function App() {
             {handleLogin()}
           </Route>
 
-          <Route path="/products/:id">
+          <Route path="/mala/:id">
             <Product />
           </Route>
           <Route path="/reviews">

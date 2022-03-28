@@ -14,7 +14,7 @@ function ProductCard({ p, handleClick }) {
     
     <Card.Link
       style={{ textDecoration: "none" }}
-      href={`/products/${id}`}
+      href={`/mala/${id}`}
       onClick={() => productClicked()}
     >
       <Card className="mb-3 mx-auto" style={{ width: "16rem" }} >

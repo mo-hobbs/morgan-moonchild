@@ -7,7 +7,6 @@ import Sort from "./Sort";
 import Category from "./Category";
 
 import ProductPage from "./ProductPage";
-import ProductCard from "./ProductCard";
 import Product from "./Product";
 
 function Shop() {
