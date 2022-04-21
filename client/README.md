@@ -2,6 +2,8 @@
 
 This application was created for my personal business making and selling meditation tools. I wanted to keep my product data on the Etsy platform but also to create my own personal website. If you are an Etsy seller and would like to use this repository to create your own website I've included a basic walkthrough and information about the tech stack used. 
 
+Visit [morganmoonchild.com](http://www.morganmoonchild.com) to see the site.
+
 ## This project was built from this [React/Rails Project Template](https://github.com/learn-co-curriculum/project-template-react-rails-api) 
 - See their documentation on available scripts and how to run and setup your Create React App, Ruby on Rails, Heroku, and Postgresql.
 * Ruby 2.7.4
