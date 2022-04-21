@@ -24,6 +24,9 @@ I used [DB Diagram](https://dbdiagram.io/d/61faa62b85022f4ee52b39ca) to create r
 
 [Instructions](https://help.etsy.com/hc/en-us/articles/360035753053-How-Do-I-Download-My-Etsy-Data-) to download your Etsy reviews as JSON.
 
+Icons and logo designed on [Canva](https://www.canva.com/).
+
+Project design idea boards and styling created on [Figma](https://www.figma.com/)
 
 ### Backend gems 
 * [bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)
