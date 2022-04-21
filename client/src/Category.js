@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ListGroup, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 function Category({ handleCategory, category }) {
   function handleSelect(e) {

@@ -10,7 +10,7 @@ import {
   ListGroupItem,
   Button,
 } from "react-bootstrap";
-import ReviewCard from "./ReviewCard";
+
 
 function Product() {
   const { id } = useParams();

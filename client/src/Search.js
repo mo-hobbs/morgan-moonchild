@@ -2,7 +2,7 @@ import React from "react";
 
 import search_icon from "./images/search_icon.png";
 
-import { Form, FormControl, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 
 function Search({ handleSearch }) {
 
@@ -24,7 +24,7 @@ function Search({ handleSearch }) {
           </Col>
           <Col xl={1} className="px-0">
             <Button className="btn-light btn-xs px-0 ">
-              <img src={search_icon} />
+              <img src={search_icon} alt="magnifying glass search icon"/>
             </Button>
           </Col>
         </Row>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Image, Row, Col } from "react-bootstrap";
-import logo_wg_rectangle from "./images/logo-rectangle-2.png";
 import footer from "./images/footer-400x100.png";
 import email_icon from "./images/email-gold.png";
 import linked_in_icon from "./images/linked-in-gold.png";
@@ -10,13 +9,6 @@ function Footer() {
   const iconSize = {
     width: "48px",
     height: "48px",
-  };
-
-  const logoSize = {
-    width: "400px",
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto",
   };
 
   return (
@@ -38,12 +30,12 @@ function Footer() {
           </a>
         </Col>
         <Col>
-          <a href="https://www.linkedin.com/in/morganlhobbs/" target="_blank">
+          <a href="https://www.linkedin.com/in/morganlhobbs/" target="_blank" rel="noreferrer">
             <img src={linked_in_icon} style={iconSize} alt="linked in icon" />
           </a>
         </Col>
         <Col>
-          <a href="https://www.instagram.com/morgan.moonchild/" target="_blank">
+          <a href="https://www.instagram.com/morgan.moonchild/" target="_blank" rel="noreferrer">
             <img src={insta_icon} style={iconSize} alt="instagram-icon" />
           </a>
         </Col>

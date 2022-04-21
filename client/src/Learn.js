@@ -1,5 +1,4 @@
 import React from "react";
-import moon_logo from "./images/moon-logo-gold.png";
 import learn_1 from "./images/learn_1.png";
 import learn_2 from "./images/learn_2.png";
 import learn_3 from "./images/learn_3.png";

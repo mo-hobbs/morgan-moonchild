@@ -7,7 +7,7 @@ import Sort from "./Sort";
 import Category from "./Category";
 
 import ProductPage from "./ProductPage";
-import Product from "./Product";
+
 
 function Shop() {
   const [search, setSearch] = useState("");
@@ -41,10 +41,6 @@ function Shop() {
     //         clearInterval(timer);
     //         };
   }, []);
-
-  function handleClick(item) {
-    return <Product item={item} />;
-  }
 
   function handleSearch(searchText) {
     setSearch(searchText);

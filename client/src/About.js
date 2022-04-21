@@ -2,7 +2,7 @@ import React from "react";
 import wood_malas from "./images/wood_malas.jpg";
 import owner_photo_1 from "./images/owner-photo-1.jpg";
 
-import { Container, Row, Col, Button, Stack, Accordion } from "react-bootstrap";
+import { Container, Row, Col, Button, Accordion } from "react-bootstrap";
 
 function About() {
   return (

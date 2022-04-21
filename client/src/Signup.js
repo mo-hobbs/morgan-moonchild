@@ -57,7 +57,6 @@ function Signup({ onLogin }) {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Control
           type="password"
-          id="current-password"
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -68,7 +67,6 @@ function Signup({ onLogin }) {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Control
           type="password"
-          id="password_confirmation"
           autoComplete="new-password"
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}

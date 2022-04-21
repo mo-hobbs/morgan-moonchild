@@ -2,7 +2,7 @@ import React from "react";
 import FeaturedItems from "./FeaturedItems";
 import Reviews from "./Reviews";
 
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 
 function Home() {
   return (

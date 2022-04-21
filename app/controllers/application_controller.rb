@@ -6,23 +6,14 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
     rescue_from ActiveRecord::RecordInvalid, with: :render_invalid
 
-
     def current_user
-    ## using for dev purposes
-    # current_user = User.find_by_username("Shep")
-    
-    ## For use in production
-    User.find_by_id(session[:user_id])
-    
-    ## alternative code
-    # @current_user ||= User.find_by_id(session[:user_id])
-    
+        User.find_by_id(session[:user_id])
     end
 
     private
 
     def authorize
-        render json: {error: ["Not authorized"]}, status: :unauthorized unless current_user 
+        render json: {error: ["Not authorized"]}, status: :unauthorized 
     end
 
     def render_not_found
@@ -33,11 +24,11 @@ class ApplicationController < ActionController::API
         render json: {error: exception.record.errors.full_messages }, status: :unprocessable_entity
     end
 
-    
     #As a last step of the Rails setup, let's verify that the cookies and sessions middleware is working as expected. To do this, make a new controller action in the ApplicationController that uses the session hash and returns a JSON response:
-
     def hello_world
         session[:count] = (session[:count] || 0) + 1
         render json: { count: session[:count] }
     end
+
+
 end

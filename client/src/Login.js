@@ -26,11 +26,18 @@ function Login({ onLogin }) {
         });
       } else {
         r.json().then((errors) => {
-          console.log(errors);
           setErrorState(errors);
         });
       }
     });
+  }
+
+  function errorMessage() {
+    if (errorState) {
+      debugger;
+      errorState.error.map((e) => <p className="error">{e}</p>)
+    }
+    else return null
   }
 
   return (
@@ -62,13 +69,14 @@ function Login({ onLogin }) {
                   placeholder="Password"
                 />
               </Form.Group>
+              {/* {errorMessage} */}
               <Button className="mb-3" variant="dark" type="submit">
                 Login
               </Button>
             </Form>
           </Col>
           <Col class="col-2">
-          <h2 class="text-center">OR</h2>
+            <h2 class="text-center">OR</h2>
           </Col>
           <Col>
             <Row className="mb-3">
