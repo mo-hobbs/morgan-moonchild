@@ -6,13 +6,8 @@ import { Container, CardGroup } from "react-bootstrap";
 
 function ProductPage({ products }) {
   function handleClick(item) {
+    // displays the product page
     return <Product item={item} />;
-    // return Object.values(item).map(p =>
-    //     console.log(p)
-    //     // <Product
-    //     // p={p}
-    //     // />
-    // )
   }
 
   function renderProducts() {
@@ -22,7 +17,7 @@ function ProductPage({ products }) {
   }
 
   return (
-    <Container >
+    <Container>
       <CardGroup>{renderProducts()}</CardGroup>
     </Container>
   );

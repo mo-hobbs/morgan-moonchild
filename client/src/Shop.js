@@ -5,17 +5,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import Search from "./Search";
 import Sort from "./Sort";
 import Category from "./Category";
-
 import ProductPage from "./ProductPage";
-
+import LoadingIcon from "./LoadingIcon";
 
 function Shop() {
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("all");
-
-  // const [isRendered, setRendered] = useState(false);
+  const [isRendered, setRendered] = useState(false);
 
   useEffect(() => {
     fetch(`/products`).then((response) => {
@@ -24,25 +22,31 @@ function Shop() {
           setProducts(product_array);
           // setRendered here when deploying and comment out from
           // const timer to clearInterval
-          // setRendered(true)
+          setRendered(true);
         });
       } else {
         response.json().then((error) => console.log(error));
       }
     });
-    //     // Use this code to simulate loading time
-    //     const timer = setTimeout(() => {
-    //         setRendered(true);
-    //     }, 2000);
-    //     //cleanup function
-    //     return function cleanup() {
-    //         console.log("Running cleanup");
-    //         // ✅ clear the interval so state is no longer updated
-    //         clearInterval(timer);
-    //         };
+    // Use this code to simulate loading time
+    // const timer = setTimeout(() => {
+    //     setRendered(true);
+    // }, 2000);
+    // //cleanup function
+    // return function cleanup() {
+    //     console.log("Running cleanup");
+    //     // ✅ clear the interval so state is no longer updated
+    //     clearInterval(timer);
+    //     };
   }, []);
 
+  // function myStopFunction() {
+  //   clearTimeout(myTimeout);
+  // }
+
+
   function handleSearch(searchText) {
+    // clearTimeout(myTimeout);
     setSearch(searchText);
   }
 
@@ -85,9 +89,8 @@ function Shop() {
         </Col>
         <Col>
           <Container>
-            <ProductPage
-              products={updatedListings}
-            />
+            {isRendered ? null : <LoadingIcon />}
+            <ProductPage products={updatedListings} />
           </Container>
         </Col>
       </Row>

@@ -11,11 +11,13 @@ import {
   Button,
 } from "react-bootstrap";
 
+import LoadingIcon from "./LoadingIcon";
 
 function Product() {
   const { id } = useParams();
 
   const [product, setProduct] = useState([]);
+  const [isRendered, setRendered] = useState(false);
 
   useEffect(() => {
     fetch(`/products/${id}`).then((response) => {
@@ -23,24 +25,12 @@ function Product() {
         response.json().then((product) => {
           // console.log(product)
           setProduct(product);
-          // setRendered here when deploying and comment out from
-          // const timer to clearInterval
-          // setRendered(true)
+          setRendered(true);
         });
       } else {
         response.json().then((error) => console.log(error));
       }
     });
-    //     // Use this code to simulate loading time
-    //     const timer = setTimeout(() => {
-    //         setRendered(true);
-    //     }, 2000);
-    //     //cleanup function
-    //     return function cleanup() {
-    //         console.log("Running cleanup");
-    //         // ✅ clear the interval so state is no longer updated
-    //         clearInterval(timer);
-    //         };
   }, [id]);
 
   //DRY - add a function to render each image and add an image footer with the product_title
@@ -49,6 +39,7 @@ function Product() {
   return (
     <Container className="mt-4">
       <Row>
+        {isRendered ? null : <LoadingIcon />}
         <Card border="light">
           <Card.Body>
             <Card.Header>

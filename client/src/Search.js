@@ -5,12 +5,23 @@ import search_icon from "./images/search_icon.png";
 import { Form, Button, Row, Col } from "react-bootstrap";
 
 function Search({ handleSearch }) {
+  // let timeout;
+
+  // function myTimeout() {
+  //   timeout = setTimeout(handleSearch, 2000);
+  // }
+
+  // function handleSubmit() {
+  //   clearTimeout(timeout);
+  // }
 
   return (
-    <Form className="d-flex">
+    <Form className="d-flex" >
       <Form.Group className="mb-3">
         <Form.Label>
-          <h5>Search</h5>
+          <h5>
+            Search <img src={search_icon} alt="magnifying glass search icon" />
+          </h5>
         </Form.Label>
         <Row>
           <Col>
@@ -22,15 +33,11 @@ function Search({ handleSearch }) {
               aria-label="Search"
             />
           </Col>
-          <Col xl={1} className="px-0">
-            <Button className="btn-light btn-xs px-0 ">
-              <img src={search_icon} alt="magnifying glass search icon"/>
-            </Button>
-          </Col>
         </Row>
         <Row>
           <Form.Text className="text-muted">
-            Search for a product by name or description...
+            Search for a product by name, description, gemstone, healing
+            properties...
           </Form.Text>
         </Row>
       </Form.Group>
