@@ -1,6 +1,38 @@
-# Getting Started with Create React App
+# E-Commerce Template for Makers and Crafty Folk
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application was created for my personal business making and selling meditation tools. I wanted to keep my product data on the Etsy platform but also to create my own personal website. If you are an Etsy seller and would like to use this repository to create your own website I've included a basic walkthrough and information about the tech stack used. 
+
+## This project was built from this [React/Rails Project Template](https://github.com/learn-co-curriculum/project-template-react-rails-api) 
+- See their documentation on available scripts and how to run and setup your Create React App, Ruby on Rails, Heroku, and Postgresql.
+* Ruby 2.7.4
+* NodeJS (v16), and npm
+* Heroku CLI
+* Postgresql
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) (v16.8.0)
+
+### Frontend gems
+*  "bootstrap": "^5.1.3",
+*  "react-bootstrap": "^2.1.2",
+*  "semantic-ui-css": "^2.4.1",
+*  "semantic-ui-react": "^2.1.1"
+
+I used [DB Diagram](https://dbdiagram.io/d/61faa62b85022f4ee52b39ca) to create relationship tables.
+
+[Instructions](https://help.etsy.com/hc/en-us/articles/360000343508-How-to-Download-Your-Listing-Information?segment=selling) on how to download your listing information from Etsy as CSV .
+
+[Instructions](https://help.etsy.com/hc/en-us/articles/360035753053-How-Do-I-Download-My-Etsy-Data-) to download your Etsy reviews as JSON.
+
+
+### Backend gems 
+* [bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)
+* [roo](https://github.com/roo-rb/roo/)
+
+
+
+
+
+
+# Information from Create React App 
 
 ## Available Scripts
 
