@@ -35,14 +35,13 @@ function Login({ onLogin }) {
   function errorMessage() {
     if (errorState) {
       debugger;
-      errorState.error.map((e) => <p className="error">{e}</p>)
-    }
-    else return null
+      errorState.error.map((e) => <p className="error">{e}</p>);
+    } else return null;
   }
 
   return (
     <>
-      <Container class="row justify-content-center mt-4">
+      <Container className="row justify-content-center mt-4">
         <Row>
           <Col>
             <Form onSubmit={handleSubmit} className="login-form">
@@ -59,7 +58,7 @@ function Login({ onLogin }) {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group className="mb-3">
                 <Form.Control
                   type="password"
                   id="current-password"
@@ -75,8 +74,8 @@ function Login({ onLogin }) {
               </Button>
             </Form>
           </Col>
-          <Col class="col-2">
-            <h2 class="text-center">OR</h2>
+          <Col className="col-2">
+            <h2 className="text-center">OR</h2>
           </Col>
           <Col>
             <Row className="mb-3">

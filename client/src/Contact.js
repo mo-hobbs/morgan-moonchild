@@ -97,7 +97,7 @@ function Contact() {
         </Button>
         {errorState
           ? errorState.error.map((e) => (
-              <p class="error" style={{ color: "red" }}>
+              <p className="error" style={{ color: "red" }}>
                 {e}
               </p>
             ))
