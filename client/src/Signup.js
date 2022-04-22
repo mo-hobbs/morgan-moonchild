@@ -46,7 +46,7 @@ function Signup({ onLogin }) {
       <Form.Group className="mb-3">
         <Form.Control
           type="username"
-          id="login-username"
+          id="signup-username"
           autoComplete="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -54,9 +54,10 @@ function Signup({ onLogin }) {
         />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3">
         <Form.Control
           type="password"
+          id="signup-password"
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -64,9 +65,10 @@ function Signup({ onLogin }) {
         />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3">
         <Form.Control
           type="password"
+          id="password_confirmation"
           autoComplete="new-password"
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
@@ -74,7 +76,7 @@ function Signup({ onLogin }) {
         />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3">
         <Form.Control
           type="fullName"
           id="fullName"

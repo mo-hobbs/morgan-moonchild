@@ -16,7 +16,7 @@ function Search({ handleSearch }) {
   // }
 
   return (
-    <Form className="d-flex" >
+    <Form className="d-flex">
       <Form.Group className="mb-3">
         <Form.Label>
           <h5>
