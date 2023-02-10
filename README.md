@@ -8,4 +8,4 @@ Developed frontend UI using Figma for design and React Bootstrap wireframe for C
 
 Implemented authentication/authorization with bcrypt gem to allow users to login and logout securely. 
 
-To run this project locally see the [README in the /client folder](client/README.md****).
+To run this project locally clone this repo and head into the README within the /client folder. 
