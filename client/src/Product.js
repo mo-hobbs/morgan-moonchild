@@ -19,6 +19,12 @@ function Product() {
   const [product, setProduct] = useState([]);
   const [isRendered, setRendered] = useState(false);
 
+  const imageSize = {
+    height: "600px",
+    width: "600px",
+    objectFit: "cover",
+  };
+
   useEffect(() => {
     fetch(`/products/${id}`).then((response) => {
       if (response.ok) {
@@ -52,6 +58,7 @@ function Product() {
                   className="d-block w-100"
                   src={product.image1}
                   alt="First slide"
+                  style={imageSize}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -59,6 +66,7 @@ function Product() {
                   className="d-block w-100"
                   src={product.image2}
                   alt="Second slide"
+                  style={imageSize}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -66,27 +74,31 @@ function Product() {
                   className="d-block w-100"
                   src={product.image3}
                   alt="Third slide"
+                  style={imageSize}
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
                   src={product.image4}
-                  alt="Third slide"
+                  alt="Fourth slide"
+                  style={imageSize}
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
                   src={product.image5}
-                  alt="Third slide"
+                  alt="Fifth slide"
+                  style={imageSize}
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
                   src={product.image6}
-                  alt="Third slide"
+                  alt="Sixth slide"
+                  style={imageSize}
                 />
               </Carousel.Item>
             </Carousel>

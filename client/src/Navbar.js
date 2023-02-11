@@ -10,7 +10,7 @@ function Header({ onLogout, user }) {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" >
+    <Navbar collapseOnSelect expand="md" >
       <Container>
         <Navbar.Brand href="/">
           <img

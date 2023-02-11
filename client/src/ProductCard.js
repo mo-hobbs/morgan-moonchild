@@ -13,13 +13,13 @@ function ProductCard({ p, handleClick }) {
   return (
     
     <Card.Link
-      style={{ textDecoration: "none" }}
+      style={{ textDecoration: "none", marginLeft: "1rem" }}
       href={`/mala/${id}`}
       onClick={() => productClicked()}
     >
       <Card className="mb-3 mx-auto" style={{ width: "16rem" }} >
         <Card.Body style={{ color: "#968F71" }}>
-          <Card.Img variant="top" src={image1} />
+          <Card.Img variant="top" src={image1} style={{ width: "222px", height: "168px" }} />
           <Card.Title className="mt-2 text-truncate">{product_title}</Card.Title>
           <Card.Footer>${price}</Card.Footer>
         </Card.Body>
