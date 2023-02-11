@@ -2,7 +2,7 @@ import React from "react";
 
 import search_icon from "./images/search_icon.png";
 
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
 
 function Search({ handleSearch }) {
   // let timeout;

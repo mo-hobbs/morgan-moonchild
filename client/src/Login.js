@@ -68,7 +68,7 @@ function Login({ onLogin }) {
                   placeholder="Password"
                 />
               </Form.Group>
-              {/* {errorMessage} */}
+              {errorMessage()}
               <Button className="mb-3" variant="dark" type="submit">
                 Login
               </Button>
