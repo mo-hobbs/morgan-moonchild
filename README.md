@@ -46,9 +46,6 @@ Project design idea boards and styling created on [Figma](https://www.figma.com/
 
 
 
-# ENVIRONMENT SETUP - Running the app locally
-
-Clone this repo on your local computer and navigate into the /morgan-moonchild folder. 
 
 # Project Template: React/Rails API
 

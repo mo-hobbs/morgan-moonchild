@@ -41,7 +41,7 @@ function Login({ onLogin }) {
 
   return (
     <>
-      <Container className="row justify-content-center mt-4">
+      <Container className="justify-content-center mt-4">
         <Row>
           <Col>
             <Form onSubmit={handleSubmit} className="login-form">
